@@ -18,7 +18,7 @@ O processo de Pull Request funciona da seguinte maneira:
 1. Candidato fará um fork desse repositório (não irá clonar direto!)
 2. Fará seu projeto nesse fork.
 3. Commitará e subirá as alterações para o SEU fork.
-4. Pela interface do Bitbucket, irá enviar um Pull Request.
+4. Irá enviar um Pull Request para este repositório.
 
 ### **ATENÇÃO** ###
 Não se deve tentar fazer o PUSH diretamente para ESTE repositório!!!
