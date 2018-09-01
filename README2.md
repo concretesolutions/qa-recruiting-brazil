@@ -7,16 +7,22 @@ pip install behave
 
 ## Arquivos de teste
     dir: 
-    .
-    ├── Kata09.md
-    ├── README.md
-    ├── features
-    │   ├── __pycache__
-    │   ├── envio_foto_video_whatsappweb.feature
-    │   ├── envio_mensagem_whatsappweb.feature
-    │   └── steps
-    ├── supermarket.py
-    └── test_Checkout.py 
+        .
+        ├── Kata09.md
+        ├── README.md
+        ├── README2.md
+        ├── __pycache__
+        │   ├── supermarket.cpython-36.pyc
+        │   └── test_Checkout.cpython-36.pyc
+        ├── features
+        │   ├── __pycache__
+        │   ├── envio_foto_video_whatsappweb.feature
+        │   ├── envio_mensagem_whatsappweb.feature
+        │   └── steps
+        │       ├── envio_foto_video_whatsappweb_steps.py
+        │       └── envio_mensagem_whatsappweb_steps.py
+        ├── supermarket.py
+        └── test_Checkout.py 
 
 ### Execução dos testes do WhatsAppWeb   
 * Executa todos os testes: 
