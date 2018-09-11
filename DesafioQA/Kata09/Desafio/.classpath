@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/jython-standalone-2.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Jars/selenium-server-standalone-3.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/cobertura-2.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/cucumber-core-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/cucumber-java-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/cucumber-junit-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/cucumber-jvm-deps-1.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/cucumber-reporting-3.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/gherkin-2.12.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Cucumber’s Jars/mockito-all-2.0.2-beta.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
