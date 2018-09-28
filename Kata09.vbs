@@ -8,7 +8,9 @@ Sub kata09()
 	'In order to make things as simple as possible,I created a variable (shoppingList) that can be used instead of any capture method
 	'This variable is the result of all itens that would be stored before the final price calculation
 	'The default value of this variable is "A;B;C;D;A;A;B;B;C;D;X;D;A;D;D;D;A;A;B;C" or 6 A's, 4 B's, 3 C's and 6 D's resulting in a final price of $600 without discount and $530 with the discount
-	shoppingList = "A;B;C;D;A;A;B;B;C;D;X;D;A;D;D;D;A;A;B;C;B"
+	shoppingList = "A;B;C;D;A;A;B;B;C;D;D;A;D;D;D;A;A;B;C;B"
+	
+	Wscript.Echo "Items purchased: " & shoppingList
 	
 	'Variables
 	'The 4 first blocks of variables determinates the rules for pricing and promotions, considering that could have a backoffice application where the owner of the supermarket input these data
@@ -52,28 +54,28 @@ Sub kata09()
 	For each item in indItems
 		If item = "A" Then
 			totalAs = totalAs + 1
-			print "Produto A registrado"
+			Wscript.Echo "Produto A registrado"
 		ElseIf item = "B" Then
 			totalBs = totalBs + 1
-			print "Produto B registrado"
+			Wscript.Echo "Produto B registrado"
 		ElseIf item = "C" Then
 			totalCs = totalCs + 1
-			print "Produto C registrado"
+			Wscript.Echo "Produto C registrado"
 		ElseIf item = "D" Then
 			totalDs = totalDs + 1
-			print "Produto D registrado"
+			Wscript.Echo "Produto D registrado"
 		End If		
 	Next
 	
 	'Quantity of each product that will be bought
-	print "Total de produtos A: " & totalAs
-	print "Total de produtos B: " & totalBs
-	print "Total de produtos C: " & totalCs
-	print "Total de produtos D: " & totalDs
+	Wscript.Echo "Total de produtos A: " & totalAs
+	Wscript.Echo "Total de produtos B: " & totalBs
+	Wscript.Echo "Total de produtos C: " & totalCs
+	Wscript.Echo "Total de produtos D: " & totalDs
 	'Price without discount
 	totalPrice = totalAs * priceA + totalBs * priceB + totalCs * priceC + totalDs * priceD
 	
-	print "O valor da compra sem desconto é R$" & totalPrice
+	Wscript.Echo "O valor da compra sem desconto Ã© R$" & totalPrice
 	
 	totalProducts = totalAs + totalBs + totalCs + totalDs
 	
@@ -121,6 +123,8 @@ Sub kata09()
 	End If
 			
 	'Final value of the shopping list with discount
-	print "O valor final da compra com desconto é R$" & discountPrice
+	Wscript.Echo "O valor final da compra com desconto Ã© R$" & discountPrice
 		
 End Sub
+
+kata09()
