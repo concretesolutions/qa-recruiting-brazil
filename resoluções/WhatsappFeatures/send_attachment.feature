@@ -1,4 +1,4 @@
-Feature: Send Attchments
+Feature: Send Attachments
     As a User 
     I want to send attachments
     In order to share content with my contacts
