@@ -34,7 +34,7 @@ Cenário: enviar uma mensagem de texto para um contato existente
 
 
 
-enário: enviar uma mensagem de texto para um grupo existente
+Cenário: enviar uma mensagem de texto para um grupo existente
   Dado que eu esteja no app do Whatsapp
   E clico no "icone de mensagen"
   Quando selecionar o grupo existente
