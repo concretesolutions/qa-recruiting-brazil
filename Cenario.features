@@ -1,0 +1,44 @@
+# language: pt
+
+Funcionalidade: faze uma chamada no Whatsapp
+  Como um usuario fazer uma chamada de voz
+  tambem posso fazer uma chamada de video
+  
+Cenário: fazer chamada de voz para um contato existente
+  Dado que eu esteja no app do Whatsapp
+  E clico em "Chamadas"
+  Quando selecionar um contato existente e o ícole do telefone
+  Então posso fazer uma chamada de voz para o contato existente
+
+
+
+
+Cenário: fazer chamada de video para um contato  existente
+  Dado que eu esteja no app do Whatsapp
+  E clico em "Chamadas"
+  Quando selecionar um contato novo e o icone de filmadora
+  Então posso fazer uma chamada de video para o contato existente.
+
+
+
+# language: pt
+
+Funcionalidade: enviar uma mensagem de texto para um contato no Whatsapp
+  Como um usuario enviar uma mensagem de texto para um usuario existente
+  
+Cenário: enviar uma mensagem de texto para um contato existente
+  Dado que eu esteja no app do Whatsapp
+  E clico no "icone de mensagem"
+  Quando selecionar um contato existente
+  Então posso enviar uma mensagem de texto para o contato existente
+
+
+
+enário: enviar uma mensagem de texto para um grupo existente
+  Dado que eu esteja no app do Whatsapp
+  E clico no "icone de mensagen"
+  Quando selecionar o grupo existente
+  Então posso enviar uma mensagem de texto para o grupo existente
+
+
+
