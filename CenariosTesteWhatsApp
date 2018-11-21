@@ -1,0 +1,24 @@
+﻿Story: Usuário efetua envio de mensagem via WhatsApp Web
+Como usuário, eu gostaria de enviar uma mensagem no aplicativo whatsapp a um outro usuario .
+
+Scenario: Usuario envia mensagem a usuário B
+Given o usuario pesquisa o usuario B 
+When quando selecionado o usuario B
+Then deve efetuar o envio de mensagem 
+And mensagem deve apresentar o check confirmando que foi enviado
+
+-----
+
+Story: Usuário apaga conversa via WhatsApp Web
+Como usuário, eu gostaria de apagar uma conversa no aplicativo whatsapp com um outro usuario.
+
+Scenario: Usuario apaga conversa com usuário B
+Given o usuario pesquisa o usuario B
+When quando selecionado o usuario B
+And seleciono com botão direito a opçao "Apagar Conversa"
+Then deve apresentar mensagem "Apagar conversa com usuario B?" 
+And as opções Cancelar e apagar.
+When selecionado a opção Apagar
+Then o Whatsapp deve emitir mensagem "Conversa apagada" 
+And usuario B não deve mais ser apesentado na lista de opções de conversas ativas.
+
