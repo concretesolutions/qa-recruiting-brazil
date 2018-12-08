@@ -1,3 +1,5 @@
+require "test/unit"
+
 RULE = { 
     "A" => { "unit_price" => 50, "special_price" => "3 for 130" },
     "B" => { "unit_price" => 30, "special_price" => "2 for 45" },
@@ -33,8 +35,6 @@ class CheckOut
     end
 
 end
-
-require "test/unit"
 
 class TestPrice < Test::Unit::TestCase
     
