@@ -1,0 +1,11 @@
+{
+  "name": "desafio-concrete",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "mocha test/calculate-price.spec.js"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
