@@ -1,4 +1,4 @@
-status.feature
+anexar.feature
 
 language: pt
 Funcionalidade: Enviar anexo no Whatsapp
@@ -42,3 +42,5 @@ E selecionar o contato Kelly
 E clicar em enviar contato
 E enviar contato
 Então mensagem com anexo com dados do contato são enviados
+
+
