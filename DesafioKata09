@@ -1,0 +1,46 @@
+
+public class Check {
+    public int price(String products) {
+        CheckOut co = new CheckOut(givenPriceRuleSet());
+        for(int i=0; i<products.length(); i++) {
+            co.scan(String.valueOf(products.charAt(i)));
+        }
+        return co.total();
+    }
+    @Test
+    public void totals() {
+        assertEquals(0, price(""));
+        assertEquals(40, price("A"));
+        assertEquals(90, price("AB"));
+        assertEquals(135, price("CDBA"));
+        assertEquals(80, price("AA"));
+        assertEquals(100, price("AAA"));
+        assertEquals(140, price("AAAA"));
+        assertEquals(180, price("AAAAA"));
+        assertEquals(200, price("AAAAAA"));
+        assertEquals(150, price("AAAB"));
+        assertEquals(180, price("AAABB"));
+        assertEquals(200, price("AAABBD"));
+        assertEquals(200, price("DABABA"));
+    }
+    @Test
+    public void acresct() {
+        CheckOut co = new CheckOut(givenPriceRuleSet());
+        assertEquals(0, co.total());
+        co.scan("A"); assertEquals(40, co.total());
+        co.scan("B"); assertEquals(90, co.total());
+        co.scan("A"); assertEquals(130, co.total());
+        co.scan("A"); assertEquals(150, co.total());
+        co.scan("B"); assertEquals(180, co.total());
+    }	
+	
+    }
+    private PriceSp givenPriceRuleSet() {
+        Map<String, SpecialPrice> pricediff = new HashMap<>();
+        pricediff.put("A", new Pricesp(40, 3, 100));
+        pricediff.put("B", new Pricesp(50, 2, 80));
+        pricediff.put("C", new Pricesp(25));
+        pricediff.put("D", new Pricesp(20));
+        return new Pricesp(pricediff);
+    }
+} 
