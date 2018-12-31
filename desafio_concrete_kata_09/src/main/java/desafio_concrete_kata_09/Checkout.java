@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
  * Class responsible for calculating product prices
  * by checking promotion rules.
  * @author Raphael_Stark
