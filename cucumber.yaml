@@ -1,0 +1,3 @@
+---
+default: -p html --format pretty
+html: --format html --out=Log/features.html
