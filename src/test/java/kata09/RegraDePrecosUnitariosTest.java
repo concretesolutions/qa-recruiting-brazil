@@ -10,6 +10,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RegraDePrecosUnitariosTest {
 
     @Test
+    public void caso_o_sku_seja_vazio_o_custo_e_zero(){
+        final Rules rules = new Rules();
+
+        final BigDecimal price = rules.getPrice("", 1);
+
+        assertThat(price).isEqualTo(BigDecimal.ZERO);
+    }
+
+    @Test
     public void um_produto_A_custa_50(){
         final Rules rules = new Rules();
 
