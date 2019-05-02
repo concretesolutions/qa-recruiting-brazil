@@ -1,3 +1,12 @@
+#Desafio feito usando Java e Cucumber.
+## Os Step definitions não foram implementados porque não é pedido no desafio.
+
+#Para Executar os testes
+##Linux: ./mvnw clean test
+##Windows: mvnw clean test
+
+---
+
 # Objetivo do Desafio
 
 Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.
