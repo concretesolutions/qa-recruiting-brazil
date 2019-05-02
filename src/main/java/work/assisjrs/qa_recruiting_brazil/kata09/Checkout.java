@@ -6,6 +6,11 @@ import lombok.Getter;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import static java.util.function.Function.identity;
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
 
 @Data
 public class Checkout {
@@ -22,9 +27,13 @@ public class Checkout {
 
         final List<BigDecimal> amounts = new ArrayList<>(products.size());
 
-        products.forEach(p -> amounts.add(rules.getPrice(p.getSku(), 1)));
+        final Map<Product, Long> items = products.stream()
+                                                 .collect(groupingBy(identity(), counting()));
 
-        return amounts.stream().reduce(BigDecimal::add).get();
+        items.forEach((product, size) -> amounts.add(rules.getPrice(product.getSku(), size)));
+
+        return amounts.stream()
+                      .reduce(BigDecimal::add).get();
     }
 
     public void scan(final Product product) {

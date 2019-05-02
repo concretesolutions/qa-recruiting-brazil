@@ -13,7 +13,7 @@ public class RegraDePrecosUnitariosTest {
     public void caso_o_sku_seja_vazio_o_custo_e_zero(){
         final Rules rules = new Rules();
 
-        final BigDecimal price = rules.getPrice("", 1);
+        final BigDecimal price = rules.getPrice("", 1L);
 
         assertThat(price).isEqualTo(BigDecimal.ZERO);
     }
@@ -22,7 +22,7 @@ public class RegraDePrecosUnitariosTest {
     public void um_produto_A_custa_50(){
         final Rules rules = new Rules();
 
-        final BigDecimal price = rules.getPrice("A", 1);
+        final BigDecimal price = rules.getPrice("A", 1L);
 
         assertThat(price).isEqualTo(new BigDecimal(50f));
     }
@@ -31,7 +31,7 @@ public class RegraDePrecosUnitariosTest {
     public void um_produto_B_custa_30(){
         final Rules rules = new Rules();
 
-        final BigDecimal price = rules.getPrice("B", 1);
+        final BigDecimal price = rules.getPrice("B", 1L);
 
         assertThat(price).isEqualTo(new BigDecimal(30f));
     }
@@ -40,7 +40,7 @@ public class RegraDePrecosUnitariosTest {
     public void um_produto_C_custa_20(){
         final Rules rules = new Rules();
 
-        final BigDecimal price = rules.getPrice("C", 1);
+        final BigDecimal price = rules.getPrice("C", 1L);
 
         assertThat(price).isEqualTo(new BigDecimal(20f));
     }
@@ -49,7 +49,7 @@ public class RegraDePrecosUnitariosTest {
     public void um_produto_D_custa_15(){
         final Rules rules = new Rules();
 
-        final BigDecimal price = rules.getPrice("D", 1);
+        final BigDecimal price = rules.getPrice("D", 1L);
 
         assertThat(price).isEqualTo(new BigDecimal(15f));
     }

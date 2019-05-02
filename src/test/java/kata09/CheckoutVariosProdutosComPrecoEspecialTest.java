@@ -9,58 +9,59 @@ import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CheckoutVariosProdutosIndividuaisTest {
+public class CheckoutVariosProdutosComPrecoEspecialTest {
 
     private static final Rules PRICING_RULES = new Rules();
 
     @Test
-    public void se_na_cesta_existir_um_produto_A_e_um_produto_B_o_total_deve_ser_80(){
-        final Checkout co = new Checkout(PRICING_RULES);
-
-        co.scan(new Product("A"));
-        co.scan(new Product("B"));
-
-        final BigDecimal price = co.getTotal();
-
-        assertThat(price).isEqualTo(new BigDecimal(80f));
-    }
-
-    @Test
-    public void uma_cesta_com_os_skus_CDBA_deve_custar_115(){
-        final Checkout co = new Checkout(PRICING_RULES);
-
-        co.scan(new Product("C"));
-        co.scan(new Product("D"));
-        co.scan(new Product("B"));
-        co.scan(new Product("A"));
-
-        final BigDecimal price = co.getTotal();
-
-        assertThat(price).isEqualTo(new BigDecimal(115f));
-    }
-
-    @Test
-    public void uma_cesta_com_os_skus_AA_deve_custar_100(){
+    public void se_existir_3_produtos_A_na_cesta_entao_o_preco_especial_sera_130(){
         final Checkout co = new Checkout(PRICING_RULES);
 
         co.scan(new Product("A"));
         co.scan(new Product("A"));
-
-        final BigDecimal price = co.getTotal();
-
-        assertThat(price).isEqualTo(new BigDecimal(100f));
-    }
-
-    @Test
-    public void uma_cesta_com_os_skus_ABA_deve_custar_130(){
-        final Checkout co = new Checkout(PRICING_RULES);
-
-        co.scan(new Product("A"));
-        co.scan(new Product("B"));
         co.scan(new Product("A"));
 
         final BigDecimal price = co.getTotal();
 
         assertThat(price).isEqualTo(new BigDecimal(130f));
+    }
+
+    @Test
+    public void caso_tenha_4_produtos_A_3_o_total_sera_180(){
+        final Checkout co = new Checkout(PRICING_RULES);
+
+        co.scan(new Product("A"));
+        co.scan(new Product("A"));
+        co.scan(new Product("A"));
+        co.scan(new Product("A"));
+
+        final BigDecimal price = co.getTotal();
+
+        assertThat(price).isEqualTo(new BigDecimal(180f));
+    }
+
+    @Test
+    public void se_existir_2_produtos_B_na_cesta_entao_o_preco_especial_sera_45(){
+        final Checkout co = new Checkout(PRICING_RULES);
+
+        co.scan(new Product("B"));
+        co.scan(new Product("B"));
+
+        final BigDecimal price = co.getTotal();
+
+        assertThat(price).isEqualTo(new BigDecimal(45f));
+    }
+
+    @Test
+    public void se_existir_3_produtos_B_na_cesta_entao_o_preco_especial_sera_75(){
+        final Checkout co = new Checkout(PRICING_RULES);
+
+        co.scan(new Product("B"));
+        co.scan(new Product("B"));
+        co.scan(new Product("B"));
+
+        final BigDecimal price = co.getTotal();
+
+        assertThat(price).isEqualTo(new BigDecimal(75f));
     }
 }
