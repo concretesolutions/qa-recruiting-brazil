@@ -7,6 +7,6 @@
     <context:annotation-config/>
 
     <context:component-scan base-package="config"/>
-    <context:component-scan base-package="stepDefinitions"/>
+    <context:component-scan base-package="steps"/>
     <context:component-scan base-package="pageObjects"/>
 </beans>
