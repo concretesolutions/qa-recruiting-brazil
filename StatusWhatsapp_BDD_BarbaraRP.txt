@@ -1,0 +1,20 @@
+#language: pt
+@conversa
+Funcionalidade: Conversar no Whatsapp
+
+Contexto: Logar no Whatsapp Web
+    Dado que estou logado no Whatsapp Web
+
+    Cenário: Clicar no ícone "Status"
+        Quando acesso visualizo meu Status
+        Então posso ver meus compartilhamentos
+
+@cen2
+    Cenário: Clicar no ícone "Status"
+        Quando insiro um novo Status
+        Contatos bloqueados não podem visualizar
+
+@cen3
+    Cenário: Clicar no ícone "Status"
+        Clico em um dos meus contatos
+        Vizualizo o Status do contato selecionado

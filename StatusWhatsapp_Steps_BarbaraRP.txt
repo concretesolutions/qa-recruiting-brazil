@@ -1,0 +1,20 @@
+Dado("que estou logado no Whatsapp Web") do
+    @logado = @whatsapp.acessarPagina
+    sleep 1
+    expect(@logado.text).to eql "Mantenha seu telefone conectado"
+end
+
+Quando("Compartilho Status") do
+  @whatsapp.CompartilhaStatus
+
+end
+
+Então("Meu Status para Contatos Bloqueados não é Visualizado") do
+    @whatsapp.NaoCompartilhaStatusContatosBloqueados
+end
+
+Quando("Clico em Status e acesso Contato") do
+    @whatsapp.AcessoStatusContatos
+end
+
+# $('._2DNgV._1i1U7._1UyGF') 

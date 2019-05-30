@@ -1,0 +1,69 @@
+ class desconto
+
+  def inicializa(valor,quantidade)
+    @valor  = valor
+    @quantidade  = quantidade
+  end
+
+  def calcula(quantidade)
+    (quantidade/@quantidade).floor * @valor
+  end
+
+end
+
+class PrecoSugerido
+
+  def inicializa (inicia,*descontos)
+    @inicia = inicia
+    @descontos = descontos
+  end
+
+  def preco(quantidade)
+    quantidade *  @inicia  - desconto(quantidade)
+  end
+
+  def desconto(quantidade)
+    @desconto.inject(0) do | mem , desconto |
+      mem + desconto.calcula (quantidade)
+    end
+  end
+end
+
+REGRAS = {
+  'A' => PrecoSugerido.new(50, desconto.new(20,3)),
+  'B' => PrecoSugerido.new(30, desconto.new(15,2)),
+  'C' => PrecoSugerido.new(20),
+  'D' => PrecoSugerido.new(15),
+}
+
+ class CheckOut
+
+  def inicializa(regras)
+    @regra  = regras
+    @items =  Hash.new
+  end
+
+   def scan(item)
+    @itens[item] || = 0
+    @itens[item] + = 1
+  end
+
+  def total
+    @itens.inject(0) do |mem , (item,quantidade)|
+      mem + preco(item,quantidade)
+    end
+  end
+
+  private
+  def preco(item,quantidade)
+    if regra(item)
+      regra(item).preco(quantidade)
+    else
+      raise  "Item inválido '#{item}'"
+    end
+  end
+
+  def  regra(item)
+    @regras[item]
+  end
+end

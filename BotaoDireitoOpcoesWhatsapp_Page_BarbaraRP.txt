@@ -1,0 +1,22 @@
+class Grupo
+    include Capybara::DSL
+
+    def Marcar como nao lida
+        find('._3zy-4 Sl-9e" button[title="Marcar como não lida"]').click
+        page.has_selector?('.__3zy-4 Sl-9e button[title="NaoLida"]')
+        find('.__P6z4jbutton==$0[title="Mensagem Ativa"]').click     
+    end
+
+    def Cancelar e Silenciar
+	find('.__3zy-4 Sl-9e'button[title="Arquivar conversa"]').click
+        page.has_selector?('.__3zy-4 Sl-9e button[title="CancelaSilencia"]')
+        find('.__3zy-4 Sl-9e 'button==$0' data-icon="muted"[title="MensagemSilenciada"]').click
+    end
+
+    def selecionarGrupo
+        find('.__3zy-4 Sl-9e'button[title="Sair do grupo"]').click
+        page.has_selector?('.__3zy-4 Sl-9e button[title="SairGrupo"]')
+        find('.__3zy-4 Sl-9e 'button==$0' data-icon="muted"[title="MensagemSaiuGrupo"]').click
+    end
+        
+end
