@@ -1,0 +1,26 @@
+class Whatsapp
+    include Capybara::DSL
+
+    def acessarPagina
+        visit 'http://web.whatsapp.com'
+        return find('.iHhHL')
+    end
+
+    def CompartilhaStatus
+        find('div class="_3j8Pd">==$0 "Novo Status"]').click
+        find('.class="web"> ==$0="Visualiza meu Status"]').click              
+    end
+
+    def NaoCompartilhaStatusContatosBloqueados
+	find('div class="_3j8Pd">==$0 "Novo Status"]').click
+        find('class="_6xQdq">Bloqueados==$0').set class style="visibility: visible;">==1
+        
+    end
+
+    def AcessoStatusContatos
+        find('._19RFN[title="Contato"]').click 
+	find('.__3NteO.copyable-image.selectable-image').set class style="visibility: visible;">==0
+    end
+
+   
+end 

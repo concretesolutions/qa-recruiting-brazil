@@ -1,0 +1,22 @@
+#language: pt
+@conversa
+Funcionalidade: Botão Direito no Whatsapp
+
+Contexto: Logar no Whatsapp Web
+    Dado que estou logado no Whatsapp Web
+
+    Cenário: Botão direito do mouse seleciono Marcar como não Lida
+        Quando opto pela funcionalidade
+        Então a mensagem se mantem ativa
+@cen2
+    Cenário: Botão direito do mouse seleciono Cancelar silenciar
+        Quando opto pela funcionalidade
+        Então o grupo apresenta ícone de silenciado não apresentando notificações
+@cen3
+     Cenário: Botão direito do mouse seleciono Sair do grupo
+        Dado que estou logado no Whatsapp Web
+        Quando seleciono o grupo 
+        E clico com botão direito, optando pela funcionalidade Sair do grupo
+        Aplicação exibe mensagem confirmando ou cancelando da ação escolhida
+	Seleciono [Cancelar], continuo ativa no Grupo
+SE	Seleciono [SAIR], aplicação apresenta mensagem no chat do grupo "Você saiu"

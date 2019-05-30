@@ -1,0 +1,32 @@
+Dado("que estou logado no Whatsapp Web") do
+    @logado = @whatsapp.acessarPagina
+    sleep 1
+    expect(@logado.text).to eql "Mantenha seu telefone conectado"
+end
+
+Quando("Marcar como Não lida") do
+  @whatsapp.NaoLida
+
+end
+
+Então("Mensagem se mantem Ativa") do
+    @whatsapp.MensagemAtiva
+end
+
+Quando("Cancelo e Silencio") do
+    @whatsapp.CancelaSilencia
+end
+
+Então("ícone é apresentado e notificação silencia") do
+    @whatsapp.MensagemSilenciada
+end
+
+Quando("Sair do Grupo") do
+    @whatsapp.SairGrupo
+end
+
+Então("Aplicação apresenta mensagem") do
+    @whatsapp.MensagemSaiuGrupo
+end
+
+# $('._2DNgV._1i1U7._1UyGF') 
