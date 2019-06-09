@@ -1,0 +1,13 @@
+ -----------------------------------------------------------
+   |   Item   |   Preço Unitario   |   Preço Promocional   |   
+   |----------|--------------------|-----------------------|    Itens não precisam ser comprados em sequencia para valer
+   |     A    |         50         |       3 por 130       |    o preço promocional.
+   |----------|--------------------|-----------------------|    Aceita infinitos itens.
+   |     B    |         30         |       2 por 45        |    Assumir que a promoção se extende  então, por exemplo, se comprar
+   |----------|--------------------|-----------------------|    6 itens 'A', o valor vai ser 260.
+   |     C    |         20         |          N.A          |    Para finalizar a compra, entrar com opção 'E'.
+   |----------|--------------------|-----------------------|    
+   |     D    |         15         |          N.A          |
+   |----------|--------------------|-----------------------|
+   |     E    |         0          |          N.A          |
+   |----------|--------------------|-----------------------|
