@@ -1,6 +1,6 @@
 Olá, 
 
-Repositorio dos DesafiosQA.
+Repositorio dos Desafios QA.
 
-atenciosamente,
+Atenciosamente,
 Bianka Moises
