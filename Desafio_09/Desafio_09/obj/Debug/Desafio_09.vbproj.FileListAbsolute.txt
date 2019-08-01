@@ -1,0 +1,33 @@
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\bin\Debug\Desafio_09.exe.config
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\bin\Debug\Desafio_09.exe
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\bin\Debug\Desafio_09.pdb
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\bin\Debug\Desafio_09.xml
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\obj\Debug\Desafio_09.Resources.resources
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbproj.GenerateResource.cache
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\obj\Debug\Desafio_09.exe
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\obj\Debug\Desafio_09.xml
+C:\Users\Admin\source\repos\Desafio_09\Desafio_09\obj\Debug\Desafio_09.pdb
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\bin\Debug\Desafio_09.exe.config
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\bin\Debug\Desafio_09.exe
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\bin\Debug\Desafio_09.pdb
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\bin\Debug\Desafio_09.xml
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbprojAssemblyReference.cache
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.Resources.resources
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbproj.GenerateResource.cache
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbproj.CoreCompileInputs.cache
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.exe
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.xml
+C:\Users\Viviane Oliveira\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.pdb
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\bin\Debug\Desafio_09.exe.config
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\bin\Debug\Desafio_09.exe
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\bin\Debug\Desafio_09.pdb
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\bin\Debug\Desafio_09.xml
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.Resources.resources
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.vbproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.exe
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.xml
+C:\Users\Admin\Desktop\Desafio_09\Desafio_09\obj\Debug\Desafio_09.pdb
