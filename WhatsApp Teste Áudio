@@ -1,0 +1,17 @@
+@WhatsAppTesteAudio
+Funcionalidade: Reproduzir áudios automático
+
+Contexto:
+  Dado que o usuário esteja em uma conversa do WhatsApp
+
+Cenário: Reprodução automática de áudios
+  Quando o usuário manda mensagens de áudio
+    E recebe mensagens de áudio do contato da conversa
+  Então é criado uma conversa por uma sequência de áudios
+
+Cenário: Verificar reprodução  
+  Quando reproduzido o áudio da conversa
+    E subsequente existe um ou mais áudios
+  Então sequencialmente os áudios existentes devem ser reproduzidos automaticamente
+  Mas se houver mensagem de texto em meio a conversa de áudio
+  Então a reprodução automática será cancelada.
