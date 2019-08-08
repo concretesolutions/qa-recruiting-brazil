@@ -1,0 +1,25 @@
+Funcionalidade: Remover Conversa
+
+-Eu enquanto usuário
+-Quero remover uma  conversa
+
+    Cenário: Remover Conversa
+      Dado que eu estou na tela de conversas do whatsapp
+      Quando eu seleciono uma conversa
+      E eu seleciono o desenho da lixeira
+	  E eu seleciono Apagar
+      Então eu verifico que se a conversa foi apagada
+
+Funcionalidade: Bloquear Contato
+
+-Eu enquanto usuário
+-Quero bloquear um contato
+
+    Cenário: Bloquear um contato
+      Dado que eu estou na tela de contatos do whatsapp
+      Quando eu seleciono um contato
+      E seleciono os três pontinhos no canto superior direito
+      E seleciono Mais
+	  E seleciono Bloquear
+	  E seleciono Bloquear novamente
+      Então eu verifico se o  contato foi bloqueado
