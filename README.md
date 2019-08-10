@@ -1,6 +1,6 @@
-================================================================================================
+===============================================================================
 ### Automação de funcionalidades do WhatsApp mobile Android e resolução do exercício Kata09 para o desafio da Concrete Solutions ###
-================================================================================================
+===============================================================================
 
 
 
@@ -30,7 +30,7 @@ no gemfile deixar assim:
             *gem "cucumber"
 
 
-bundle install - cria o gemlock
+bundle install - instala as gems e depois cria o gemlock
 
 
 
