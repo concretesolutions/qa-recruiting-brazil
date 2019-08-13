@@ -1,0 +1,81 @@
+'Variáveis globais
+Dim quantA As Integer
+Dim quantB As Integer
+Dim quantC As Integer
+Dim quantD As Integer
+Dim total As Double
+Sub MostraCodigoVBA()
+'
+Application.SendKeys "%{F11}", True
+End Sub
+Sub Zerar()
+'
+'Para limpar as quantidades e totalizador
+'
+Range("G10:G25").Select
+Selection.ClearContents
+quantA = 0
+quantB = 0
+quantC = 0
+quantD = 0
+Range("J9").Value = 0
+Range("A1").Select
+End Sub
+Sub PopulaProdutoA()
+'
+'Popula produto e recalcula
+'
+quantA = quantA + 1
+Range("G10").Value = quantA
+Call Totaliza
+End Sub
+Sub PopulaProdutoB()
+'
+'Popula produto e recalcula
+'
+quantB = quantB + 1
+Range("G11").Value = quantB
+Call Totaliza
+End Sub
+Sub PopulaProdutoC()
+'
+'Popula produto e recalcula
+'
+quantC = quantC + 1
+Range("G12").Value = quantC
+Call Totaliza
+End Sub
+Sub PopulaProdutoD()
+'
+'Popula produto e recalcula
+'
+quantD = quantD + 1
+Range("G13").Value = quantD
+Call Totaliza
+End Sub
+Sub Totaliza()
+'
+'Rotina que totaliza a compra de produtos baseado nas quantidades adicionadas
+'
+Dim auxiliar, auxiliar2 As Double
+total = 0
+For i = 10 To 25
+    If Range("G" & i).Value <> "" And Range("G" & i).Value < Range("D" & i).Value Then
+        total = total + Range("C" & i).Value * Range("G" & i).Value
+    End If
+    If Range("G" & i).Value <> "" And Range("D" & i).Value = "" Then
+        total = total + Range("C" & i).Value * Range("G" & i).Value
+    End If
+    If Range("G" & i).Value <> "" And Range("G" & i).Value >= Range("D" & i).Value And Range("D" & i).Value <> "" Then
+        auxiliar2 = (Range("G" & i).Value \ Range("D" & i).Value)
+        auxiliar = (Range("G" & i).Value) Mod Range("D" & i).Value
+        If auxiliar = 0 And auxiliar2 > 0 Then
+            total = total + Range("F" & i).Value * auxiliar2
+        End If
+        If auxiliar > 0 And auxiliar2 > 0 Then
+            total = total + Range("F" & i).Value * auxiliar2 + Range("C" & i).Value * auxiliar
+        End If
+    End If
+    Range("J9").Value = total
+Next
+End Sub
