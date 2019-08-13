@@ -1,0 +1,70 @@
+ESPECIFICAÇÃO DE CASOS DE TESTE
+
+ALVO: APLICATIVO WHATSAPP
+
+
+CENÁRIO 01: Situações de pesquisa de contatos.
+
+CT01: Encontrar um contato existente na agenda do telefone para iniciar uma conversa com ele.
+
+PRÉ-CONDIÇÃO: 
+Existir na agenda do aparelho o nº do telefone procurado.
+
+PASSOS:
+1-Na tela do APP acionar o ícone de lupa.
+2-Na agenda de números exibida, digitar o nome do contato desejado.
+3-Selecionar na lista de sugestões apresentada o contato que coincidir com o nome digitado no campo de pesquisa.
+
+RESULTADO ESPERADO:
+O nome do contato deve ser filtrado à medida em que se digita seu nome e a seleção deve abrir uma nova janela para iniciar conversa.
+
+
+CT02: Tentativa de encontrar um contato na agenda do telefone para iniciar uma conversa com ele, porém o contato não consta na agenda do telefone.
+
+PRÉ-CONDIÇÃO: 
+Não existir na agenda do aparelho o nº do telefone procurado.
+
+PASSOS:
+1-Na tela do APP acionar o ícone de lupa para selecionar um contato à conversar.
+2-Na agenda de números exibida, digitar o nome do contato.
+
+RESULTADO ESPERADO:
+O nome do contato deve ser filtrado à medida em que se digita seu nome, porém por não existir na agenda, o APP deve emitir a mensagem "Sem resultados para <argumento digitado>".
+
+
+
+CENÁRIO 02: Situações de conexão durante envio de mensagens.
+
+CT01: Tentativa de envio de mensagem de texto estando conectado somente via WI-FI.
+
+PRÉ-CONDIÇÃO: 
+Existir uma conexão WI-FI ativa para o aparelho.
+Existir ao menos um contato na agenda do aparelho para se iniciar uma conversa via texto.
+
+PASSOS:
+1-Na tela do APP acionar o ícone de lupa.
+2-Na agenda de números exibida, digitar o nome de um contato existente.
+3-Selecionar na lista de sugestões apresentada o contato que coincidir com o nome digitado no campo de pesquisa.
+4-Na janela aberta para conversa, digitar um texto para envio.
+5-Acionar o ícone de envio da mensagem.
+
+RESULTADO ESPERADO:
+A mensagem deve ser enviada ao contato selecionado, passando a ser exibida na tela do aparelho marcada com o ícone de envio e a respectiva hora do envio.
+
+
+CT02: Tentativa de envio de mensagem de texto estando desconectado do WI-FI e sem dados móveis ativos.
+
+PRÉ-CONDIÇÃO: 
+Estar desconectado de uma rede WI-FI.
+Estar desconectado dos dados móveis do aparelho.
+Existir ao menos um contato na agenda do aparelho para se iniciar uma conversa via texto.
+
+PASSOS:
+1-Na tela do APP acionar o ícone de lupa.
+2-Na agenda de números exibida, digitar o nome de um contato existente.
+3-Selecionar na lista de sugestões apresentada o contato que coincidir com o nome digitado no campo de pesquisa.
+4-Na janela aberta para conversa, digitar um texto para envio.
+5-Acionar o ícone de envio da mensagem.
+
+RESULTADO ESPERADO:
+A mensagem deve passar a ser exibida na tela do aparelho, marcada com o ícone de espera e a hora da tentativa, porém ainda pendente de ser entregue ao contato selecionado devido não existir conexão ativa.
