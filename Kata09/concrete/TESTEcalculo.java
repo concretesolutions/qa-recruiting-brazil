@@ -51,6 +51,6 @@ public class TESTEcalculo {
 	    int somaTudo = calcDescA + calcDescB + ProdCSemDesconto+ProdDSemDesconto;
 
 	    System.out.print("\n\n VALOR TOTAL COM DESCONTO: \n"+somaTudo);
-	  //return somaTudo;		
+	 		
 	}
 }
