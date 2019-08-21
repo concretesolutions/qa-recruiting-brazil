@@ -1,0 +1,7 @@
+Respota para o exercício 09 do Kata:
+
+How can these be specified in such a way that the checkout doesn’t know about particular items and their pricing strategies?
+- A reposta é: Através de encapsulamento, ou seja, através da criação de métodos que retornem os descontos desejados baseados em regras definidas na classe de precificação. Caso a classe de precificação seja encapsulada o suficiente para fazer com que os atributos do objetos não fiquem expostos para a classe de checkout, a nossa tarefa está cumprida e a dependência de uma classe para a outra será baixa.
+
+How can we make the design flexible enough so that we can add new styles of pricing rule in the future?
+- Resposta: Criando construtores para a classe que montem o objeto de acordo com os parâmetros recebidos.
