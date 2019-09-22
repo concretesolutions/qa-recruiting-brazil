@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: gherkin-official
+Version: 4.1.3
+Summary: Gherkin parser (official, by Cucumber team)
+Home-page: https://github.com/cucumber/gherkin-python
+Author: Cucumber Ltd and Björn Rasmusson
+Author-email: cukes@googlegroups.com
+License: MIT
+Download-URL: https://github.com/cucumber/gherkin-python/archive/v4.1.3.tar.gz
+Description: UNKNOWN
+Keywords: gherkin,cucumber,bdd
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3

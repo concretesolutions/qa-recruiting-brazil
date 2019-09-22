@@ -1,24 +1,27 @@
-# Objetivo do Desafio
+# kata09
+repositorio com desafio
 
-Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.
+Para a resolução do desafio "Kata 9: Checkout", foi usado linguagem Python.
+O repositorio contem o arquivo "CheckOut.py" que contem a classe CheckOut no qual foi implementado a resolução do problema.
+O foco da resolução foi atender os cenarios de testes solicitados.
+O arquivo test_CheckOut.py esta implementado os metodos de testes unitarios.
 
-Para isso você deverá conceber cenários para duas funcionalidades do Whatsapp e resolver o exercício 09 do site [CodeKata](http://www.codekata.com), que também pode ser encontrado [aqui](Kata09.md).
+Foi utilizado o Pytest para executar os testes unitarios, ultilizando apenas o comando pytest no terminal de acordo com o diretorio que o teste se encontra.
 
-### Deve conter ###
+No diretorio features, se encontra a especificação de 3 funcionalidades do Whatsapp contendo 2 cenarios para cada feature.
+Foi criado tambem, o diretorio step contendo interfaces para a implementação dos metodos de testes utilizando o Behave.
 
-* Especificação de duas funcionalidades do Whatsapp (não importa se o app é Android, iOS, Windows Phone ou versão Web) em Gherkin ou Gauge
-* Cada especificação deve conter ao menos um cenário de teste
-* Resposta do exercício 09 do site [CodeKata](http://www.codekata.com), ou [aqui](Kata09.md), na linguagem de programação que lhe for mais conveniente
+Para execução dos testes, voce pode ter que instalar no terminal as seguintes libs:
 
+pip install gherkin
+pip install pytest
+pip install behave
 
-### **Processo de submissão** ###
-O candidato deverá implementar a solução e enviar um pull request para este repositório com a solução.
+Apos instaladas no mesmo terminal no diretorio do projeto executar o comenados a seguir, respectivamente:
+pytest
+behave
 
-O processo de Pull Request funciona da seguinte maneira:
-1. Candidato fará um fork desse repositório (não irá clonar direto!)
-2. Fará seu projeto nesse fork.
-3. Commitará e subirá as alterações para o SEU fork.
-4. Irá enviar um Pull Request para este repositório.
+respectivamente.
 
-### **ATENÇÃO** ###
-Não se deve tentar fazer o PUSH diretamente para ESTE repositório!!!
+Obrigado pela oportunidade
+At.
