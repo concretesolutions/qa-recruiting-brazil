@@ -1,0 +1,34 @@
+Olá,
+
+existem 2 novos arquivos no diretório.
+
+1 - Cenários de teste para Whatsapp (BDD-Whatsapp.txt).
+
+2 - Arquivo na extensão java contendo código Groovy (groovy.java).
+
+	- Para executar o código Groovy abra o arquivo no Notepad++.
+	
+	- Copie o código e cole no link abaixo, clique em Execute Script e veja o resultado na aba Output.
+	
+		https://groovyconsole.appspot.com
+
+	- Por favor leia todos os comentários no código.
+	
+	- É possível fazer vários testes comentando/descomentando linha, instruções no código.
+	
+	- Como as tarefas foram apresentadas em inglês, respondi as mesmas usando idioma inglês também.
+	
+
+
+Caso precise de mais alguma informação por favor entre em contato.
+
+
+Atenciosamente,
+
+Luckxander Sena Sidney
+
+
+
+
+
+
