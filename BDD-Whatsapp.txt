@@ -1,0 +1,48 @@
+Feature: Changing whatsapp settings
+   In order to use whatsapp messenger
+   users should be able to customize
+   all settings options
+
+   Scenario: Insert wallpaper
+      Given the settings window is open
+       When I press chats
+        And I press wallpaper
+        And a pop up opens
+        And I choose a image from gallery
+        And I select define
+       Then the image is inserted on background
+    
+   Scenario: Turn off last seen online status
+      Given the the settings windows is open
+       When I press account
+        And I press privacy
+        And I press last seen
+        And I choose nobody
+       Then nobody can see last time I was online
+
+
+Feature: Sending media on whatsapp
+   In order to use whatsapp messenger
+   users should be able to send media
+   to other contacts
+
+   Scenario: Send video to a contact
+      Given the contact window is open
+       When I press attach image
+        And a pop up opens
+        And I choose a video from gallery
+        And I press send button
+       Then the video is sent
+
+   Scenario: Send image to a contact
+      Given the contact window is open
+       When I press attach image
+        And a pop up opens
+        And I choose an image from gallery
+        And I press send button
+       Then the image is sent
+
+
+
+
+
