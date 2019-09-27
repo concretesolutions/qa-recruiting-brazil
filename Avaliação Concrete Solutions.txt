@@ -1,0 +1,30 @@
+﻿Funcionalidade:Buscar Contato
+	Como usuário 
+	Desejo localizar um contato específico
+	Assim poderei realizar comunicação com este contato
+
+
+Cenário: 1) Quando o usuário acessar a aplicação o campo busca deverá ser exibido
+	Dado Um usuário acessou a tela inicial da aplicação 
+        E preencheu o campo busca com o dado desejado
+	Quando Clicar no botão buscar
+	Então uma lista com dados semelhantes aos inseridos na busca são exibidos
+
+
+
+Funcionalidade:Editar Conversas
+	Como usuário 
+	Desejo apagar o registro de mensagens de um contato específico
+	Assim poderei liberar espaço na memória do meu dispositivo
+
+
+Cenário: 1) Quando o usuário acessar a aplicação o botão editar deverá ser exibido
+	Dado Um usuário acessou a tela inicial da aplicação
+	Quando Clicar no botão editar
+	Então uma lista com todas as conversas existentes separadas por contatos são exibidos
+	Quando o usuário escolher um ítem da lista de conversas
+	E clicar no botão apagar
+	Então os dados referentes ao item escolhido são deletados do dispositivo
+	E a seguinte mensagem de sucesso é apresentada por 2 segundos conforme layout especificado: Conversa apagada
+
+
