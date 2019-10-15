@@ -30,10 +30,14 @@ public class kata09 {
 			}else {
 				valueD += 15;
 			}
-			
 		}
-		
 		return valueA+valueB+valueC+valueD+discountA+discountB;
+	}
+	
+	public static String scan (String total,char item) {
+		total = total.concat(String.valueOf(item).toUpperCase());
+		
+		return total;
 	}
 
 }

@@ -9,7 +9,7 @@ import code.kata09;
 class junit {
 
 	@Test
-	void test() {
+	void test_totals() {
 		assertEquals(0, kata09.price(""));
 		assertEquals(50, kata09.price("A"));
 		assertEquals(80, kata09.price("AB"));
@@ -24,5 +24,26 @@ class junit {
 		assertEquals(190, kata09.price("AAABBD"));
 		assertEquals(190, kata09.price("DABABA"));
 	}
-
+	
+	@Test
+	void test_incremental() {
+		String total = "";
+		
+		assertEquals(0, kata09.price(total));
+		
+		total = kata09.scan(total,'A'); 
+		assertEquals( 50, kata09.price(total));
+		
+		total = kata09.scan(total,'B'); 
+		assertEquals( 80, kata09.price(total));
+		
+		total = kata09.scan(total,'A'); 
+		assertEquals( 130, kata09.price(total));
+		
+		total = kata09.scan(total,'A'); 
+		assertEquals( 160, kata09.price(total));
+		
+		total = kata09.scan(total,'B'); 
+		assertEquals( 175, kata09.price(total));
+	}
 }
