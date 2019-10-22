@@ -28,6 +28,7 @@ public class EnvioDeMidea extends GeradorDriver {
 		midea.elementoLista(getDriver());
 		seleciona.anexarArquivo(getDriver());
 		usuario.enviaMidea();
+		
 	}
 
 }

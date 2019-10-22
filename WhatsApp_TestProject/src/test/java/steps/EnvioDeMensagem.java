@@ -20,6 +20,7 @@ public class EnvioDeMensagem extends GeradorDriver{
 	@Então("^verificar se a  mensagem foi enviada com sucesso$")
 	public void verificarSeAMensagemFoiEnviadaComSucesso() throws Throwable {
 	    usuario.confirmaEnvio();
+	    
 	}
 
 
