@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/desafio-qa/desafio-qa.iml" filepath="$PROJECT_DIR$/desafio-qa/desafio-qa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qa-recruiting-brazil.iml" filepath="$PROJECT_DIR$/qa-recruiting-brazil.iml" />
+    </modules>
+  </component>
+</project>
