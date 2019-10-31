@@ -25,8 +25,9 @@ public class TestPricingRules {
 
         assertEquals(Long.valueOf(0), price(""));
         assertEquals(Long.valueOf(50), price("A"));
-        assertEquals(Long.valueOf(80), price("AB"));
-        assertEquals(Long.valueOf(115), price("CDBA"));
+        assertEquals(Long.valueOf(30), price("B"));
+        assertEquals(Long.valueOf(20), price("C"));
+        assertEquals(Long.valueOf(15), price("D"));
 
         assertEquals(Long.valueOf(100), price("AA"));
         assertEquals(Long.valueOf(130), price("AAA"));
@@ -34,6 +35,26 @@ public class TestPricingRules {
         assertEquals(Long.valueOf(230), price("AAAAA"));
         assertEquals(Long.valueOf(260), price("AAAAAA"));
 
+        assertEquals(Long.valueOf(45), price("BB"));
+        assertEquals(Long.valueOf(75), price("BBB"));
+        assertEquals(Long.valueOf(90), price("BBBB"));
+        assertEquals(Long.valueOf(120), price("BBBBB"));
+        assertEquals(Long.valueOf(135), price("BBBBBB"));
+
+        assertEquals(Long.valueOf(40), price("CC"));
+        assertEquals(Long.valueOf(60), price("CCC"));
+        assertEquals(Long.valueOf(80), price("CCCC"));
+        assertEquals(Long.valueOf(100), price("CCCCC"));
+        assertEquals(Long.valueOf(120), price("CCCCCC"));
+
+        assertEquals(Long.valueOf(30), price("DD"));
+        assertEquals(Long.valueOf(45), price("DDD"));
+        assertEquals(Long.valueOf(60), price("DDDD"));
+        assertEquals(Long.valueOf(75), price("DDDDD"));
+        assertEquals(Long.valueOf(90), price("DDDDDD"));
+
+        assertEquals(Long.valueOf(80), price("AB"));
+        assertEquals(Long.valueOf(115), price("CDBA"));
         assertEquals(Long.valueOf(160), price("AAAB"));
         assertEquals(Long.valueOf(175), price("AAABB"));
         assertEquals(Long.valueOf(190), price("AAABBD"));
