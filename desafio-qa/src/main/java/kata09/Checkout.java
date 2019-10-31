@@ -1,7 +1,8 @@
+package kata09;
+
 import Utils.MathUtils;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.function.Function.identity;
@@ -20,7 +21,7 @@ public class Checkout{
     }
 
     public Long getTotalPrice(){
-        LinkedHashMap<String, Long> skus = (LinkedHashMap)items.stream().collect(groupingBy(identity(), counting()));
+        Map<String, Long> skus = items.stream().collect(groupingBy(identity(), counting()));
         List<Long> itemTotals = new ArrayList<>();
 
         for(Map.Entry<String, Long> entry: skus.entrySet()) {

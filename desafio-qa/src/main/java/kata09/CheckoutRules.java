@@ -1,3 +1,5 @@
+package kata09;
+
 import sun.rmi.runtime.Log;
 
 import java.math.BigDecimal;
@@ -49,7 +51,7 @@ public class CheckoutRules {
                 return unityPrice * quantity;
             }
 
-            default: throw new IllegalArgumentException();
+            default: return 0L;
 
         }
     }
