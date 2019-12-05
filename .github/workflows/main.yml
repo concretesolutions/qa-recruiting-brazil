@@ -1,0 +1,34 @@
+Function: Publicar no status
+
+Scenario: Atualizar seu status
+Given que o usuário esteja no aplicativo whatsapp
+And acessado a aba Status
+When o usuário clica em "Meu Status"
+Then é exibida a câmera
+And a midia
+When o usuário selecionar uma mídia
+Then o status será atualizado
+
+Scenario: Digitar seu status
+Given que o usuário esteja no aplicativo whatsapp
+And acessado a aba Status
+When o usuário clica no ícone de escrever no status
+Then é exibida uma tela colorida
+When o usuário digita um texto para o status
+Then o status é atualizado
+
+Function: Chamadas
+
+Scenario: Realizar chamada pelo perfil
+Given que o usuário esteja no aplicativo whatsapp
+When o usuário clicar na foto do perfil
+Then será exibida a opção de chamada
+When o usuário selecionar a opção de chamada
+Then a chamada será realizada
+
+Scenario: Realizar chamada pela conversa
+Given que o usuário esteja no aplicativo whatsapp
+When o usuário clicar na conversa da pessoa
+Then será exibida a opção de chamada no canto superior direito da tela
+When o usuário selecionar a opção de chamada
+Then a chamada será realizada
