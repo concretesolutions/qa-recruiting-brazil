@@ -1,76 +1,213 @@
-# Kata09: Back to the Checkout
-
-http://codekata.com/kata/kata09-back-to-the-checkout/
-
-
-Back to the supermarket. This week, we’ll implement the code for a checkout system that handles pricing schemes such as “apples cost 50 cents, three apples cost $1.30.”
-
-Way back in KataOne we thought about how to model the various options for supermarket pricing. We looked at things such as “three for a dollar,” “$1.99 per pound,” and “buy two, get one free.”
-
-This week, let’s implement the code for a supermarket checkout that calculates the total price of a number of items. In a normal supermarket, things are identified using Stock Keeping Units, or SKUs. In our store, we’ll use individual letters of the alphabet (A, B, C, and so on). Our goods are priced individually. In addition, some items are multipriced: buy n of them, and they’ll cost you y cents. For example, item ‘A’ might cost 50 cents individually, but this week we have a special offer: buy three ‘A’s and they’ll cost you $1.30. In fact this week’s prices are:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using static System.Console;
 
 
-| Item | Unit Price | Special Price |
-|------|------------|---------------|
-| A    | 50         | 3 for 130     |
-| B    | 30         | 2 for 45      |
-| C    | 20         |               |
-| D    | 15         |               |
+namespace DesafioConcreteLeo
+
+{
+    class Program
+    {
 
 
-Our checkout accepts items in any order, so that if we scan a B, an A, and another B, we’ll recognize the two B’s and price them at 45 (for a total price so far of 95). Because the pricing changes frequently, we need to be able to pass in a set of pricing rules each time we start handling a checkout transaction.
 
-The interface to the checkout should look like:
 
-```
-	co = CheckOut.new(pricing_rules)
-	co.scan(item)
-	co.scan(item)
-	price = co.total
-```	
 
-Here’s a set of unit tests for a Ruby implementation. The helper method price lets you specify a sequence of items using a string, calling the checkout’s scan method on each item in turn before finally returning the total price.
+        static void Main(string[] args)
+        {
 
-```
-class TestPrice < Test::Unit::TestCase
-	def price(goods)
-		co = CheckOut.new(RULES)
-		goods.split(//).each { |item| co.scan(item) }
-		co.total 
-	end
+            string[] produto = new string[10];
+            double item1 = 0;
+            double item2 = 0;
+            double item3 = 0;
+            double item4 = 0;
+            double totaGeral = 0;
+            double totalItemA = 0;
+            double totalItemB = 0;
+            double contador = 0;
+            double contadoritem2 = 0;
+            int valorUnitarioItemA = 50;
+            double valorUnitarioItemB = 30;
+            double total = 0;
+            int mult = 0;
+            string[] r = new string[10];
+            int[] s = new int[10];
+            int[] v = new int[20];
+            int[] repeticao = new int[10];
+            var j = 0;
 
-	def test_totals
-		assert_equal(  0, price(""))
-		assert_equal( 50, price("A"))
-		assert_equal( 80, price("AB"))
-		assert_equal(115, price("CDBA"))
-		
-		assert_equal(100, price("AA"))
-		assert_equal(130, price("AAA"))
-		assert_equal(180, price("AAAA"))
-		assert_equal(230, price("AAAAA"))
-		assert_equal(260, price("AAAAAA"))
-		
-		assert_equal(160, price("AAAB"))
-		assert_equal(175, price("AAABB"))
-		assert_equal(190, price("AAABBD"))
-		assert_equal(190, price("DABABA"))
-	end
 
-	def test_incremental
-		co = CheckOut.new(RULES)
-		assert_equal( 0, co.total)
-		co.scan("A"); assert_equal( 50, co.total)
-		co.scan("B"); assert_equal( 80, co.total)
-		co.scan("A"); assert_equal(130, co.total)
-		co.scan("A"); assert_equal(160, co.total)
-		co.scan("B"); assert_equal(175, co.total)
-	end 
-end
-```
+            Write($"Seja bem vindo\n");
+            Write($" \n");
+            Write($" \n");
+            Write($"Este projeto tem como função calcular o valor total de 10 itens \n");
+            Write($" \n");
+            Write($" \n");
+            Write($"Vamos começar \n");
 
-There are lots of ways of implementing this kind of algorithm; if you have time, experiment with several.
 
-## Objectives of the Kata
+            // CLIENTE DEVERÁ INFORMAR 10 ITENS E ESSE FOR QUE CONTROLA OS ITENS 
+            for (var i = 0; i < 10; i++)
+            {
+                Write($"Informe o item {i + 1} \n");
+                Write($"1-A , 2-B , 3-C , 4-D                 \n");
 
-To some extent, this is just a fun little problem. But underneath the covers, it’s a stealth exercise in decoupling. The challenge description doesn’t mention the format of the pricing rules. How can these be specified in such a way that the checkout doesn’t know about particular items and their pricing strategies? How can we make the design flexible enough so that we can add new styles of pricing rule in the future?
+                if (!int.TryParse(ReadLine(), out s[i]) || s[i] > 4 || s[i] < 1)
+                {
+                    Write($"Informe um produto válido \n");
+                    i--;
+                    continue;
+                }
+
+                if (!EhRepetido(v, s[i], j))
+                {
+                    v[j++] = s[i];
+
+                }
+
+
+                // REPONSAVEL POR VERIFICAR QUAL ITEM O CLIENTE SELECIONOU 
+                switch (s[i])
+                {
+                    case 1:
+                        item1++;
+                        break;
+                    case 2:
+                        item2++;
+                        break;
+                    case 3:
+                        item3++;
+                        break;
+                    case 4:
+                        item4++;
+                        break;
+
+                }
+
+            }
+
+
+
+
+            // TOTAL DE ITENS SELECIONADOS 
+            double totals = item1 + item2 + item3 + item4;
+
+
+
+
+
+            /*-------------------------------------------VALIDAÇÃO DO ITEM A------------------------------------------------------------------>*/
+            totalItemA = item1;
+            if (item1 == 0)
+            {
+                total = 0;
+
+            }if (item2 == 0)
+            {
+                    totalItemB = 0;
+                    valorUnitarioItemB = 0;
+                    contadoritem2 = 0;              
+            }
+
+
+            if (item1 == 1)
+            {
+                total = 50;
+
+            }
+
+                if (item1 >= 3)
+                {
+
+                    while (item1 % 3 != 0)
+                    {
+                        item1--;
+                        contador = contador + 50;
+                    }
+
+                    if (item1 % 3 == 0)
+                    {
+
+
+                        for (int i = 0; i < item1; i++)
+                        {
+                            mult++;
+                            valorUnitarioItemA = mult / 3;
+
+                        }
+
+                        valorUnitarioItemA = valorUnitarioItemA * 130;
+
+                    }
+
+                    total = valorUnitarioItemA + contador;
+                  
+                }
+            
+                
+
+                /*-------------------------------------------------------------------VALIDAÇÃO DO ITEM B--------------------------------------------------------------*/
+
+
+              
+                if (item2 == 1)
+                {
+                    valorUnitarioItemB = 30;
+                    WriteLine($"VALOR TOTAL A PAGAR É {valorUnitarioItemB}");
+
+                }
+                if (item2 >= 2)
+                {
+                    while (item2 % 2 != 0)
+                    {
+                        item2--;
+                        contadoritem2++;
+                    }
+
+                    if (item2 % 2 == 0)
+                    {
+
+                        contadoritem2 = contadoritem2 * 30;
+                        valorUnitarioItemB = item2 * 22.5;
+                        totalItemB = valorUnitarioItemB + contadoritem2;
+
+                    }
+
+              }
+
+                WriteLine($"ITEM A, QUANTIDADE:     {totalItemA }");
+                WriteLine($"ITEM B, QUANTIDADE:     {item2 }");
+                WriteLine($"ITEM C, QUANTIDADE:     {item3 }");
+                WriteLine($"ITEM D, QUANTIDADE:     {item4 }");
+                Write($" \n");
+                Write($" \n"); ;
+
+                totalItemB = valorUnitarioItemB + contadoritem2;
+                totaGeral = total + totalItemB + (item3 * 20) + (item4 * 15);
+                WriteLine($"VALOR TOTAL A PAGAR É---------------------------- {totaGeral}");
+                WriteLine($"FIM");
+                Console.ReadKey();
+    
+
+
+        }
+        public static bool EhRepetido(int[] vetor, int item, int posicao)
+        {
+            for (int i = 0; i < posicao; i++)
+                if (vetor[i] == item)
+
+
+                    return true;
+            return false;
+
+        }
+
+
+    }
+
+}
+
+
+
