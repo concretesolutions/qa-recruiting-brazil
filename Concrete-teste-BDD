@@ -1,0 +1,33 @@
+#language:pt
+
+Funcionalidade: bloquear contato para não visualizar o meu Status no WhatsApp
+
+Contexto: Usuário logado no WhatsApp
+
+Cenario: bloquear contato para não visualizar o meu Status no WhatsApp via Mobile
+Dado acesso a aba Status
+E acesso o menu de configuração
+E acesso a opção "Privacidade do Status"
+E seleciono a opção "Meus contatos, exceto..."
+E seleciono o contato que não desejo que visualize o meu Status
+Quando clico no icone para confirmar
+E volta para a funcionalidade "Privacidade do Status"
+E clico no botão "Concluído"
+Então o contato selecionado não visualizará o meu Status
+
+----------------------------------------------
+#language:pt
+
+Funcionalidade: apagar mensagens no WhatsApp
+
+Contexto: Usuário logado no WhatsApp web
+
+Cenario: apagar mensagens do contato
+Dado estou no "Menu Principal"
+E seleciono o contato desejado
+E acesso a configuração
+E seleciono a opção "Limpar mensagens"
+Quando exibir a popup
+E desmarco a opção "Manter mensagens favoritas"
+E clico no botão "Limpar"
+Então as mensagens serão apagadas
