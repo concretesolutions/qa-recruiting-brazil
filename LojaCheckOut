@@ -1,0 +1,31 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class LojaCheckOut{
+
+	 private Map<String, Integer> produtos = new HashMap<>();
+	 private Map<String, double> precosProdutos = new HashMap<>();
+
+
+	 public void lerProduto(String produto) {
+		  produtos.put(produto, produtos.get(produto) + 1);
+	}
+	
+	public void precoProduto(String produto, double precoDoProduto) {
+        precosProdutos.put(produto, precoDoProduto);
+    }
+	
+	 public double calculateTotalProdutos(Map<String, double> precosProdutos) {
+		double totalValor = 0;
+
+        for (Map.Entry<String, Integer> verificaProdutos : precosProdutos.entrySet()) {
+            String produtoSelecionado = verificaProdutos.getKey();
+            if (precosProdutos.containsKey(produtoSelecionado)) {
+				totalValor += calculateTotalProdutos(produtoSelecionado, verificaProdutos.getValue());
+            }
+        }
+
+        return totalValor;
+    }
+	
+}
