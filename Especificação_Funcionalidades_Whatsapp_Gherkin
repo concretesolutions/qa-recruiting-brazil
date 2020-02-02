@@ -1,0 +1,51 @@
+Funcionalidade 1 : Pesquisar contato
+ Eu como usuario desejo pesquisar um contato valido.
+ 
+ Contexto:
+    Dado que usuario está logado no aplicativo "whatsapp" versão android 
+ 
+ Cenário 1: Pesquisar contato valido através do icone "lupa"
+  
+ E clicar no icone "lupa"
+ E preencher o campo "pesquisar" com o valor "Marcela"
+ Entao uma listagem de conversas, outros contatos e mensagens que contenham o nome "Marcela" é apresentado.
+ 
+ 
+ Cenário 2: Pesquisar contato valido através do icone "iniciar conversa"
+  
+ E clicar no icone "iniciar conversa"
+ E clicar no icone "lupa"
+ E preencher o campo "pesquisar" com o valor "Marcela"
+ Entao uma listagem de todos os contatos telefonicos que contenham o nome "Marcela" é apresentado.
+ 
+ 
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ 
+ 
+ Funcionalidade 2 : Tirar fotos e enviar para contato valido
+ Eu como usuario desejo tirar foto e enviar para contato.
+ 
+ Contexto:
+    Dado que usuario está logado no aplicativo "whatsapp" versão android 
+ 
+ Cenário 1: Enviar foto para mais de um contato. 
+  
+ E clicar no icone "foto"
+ E capturar uma foto 
+ E clicar no icone "check/ok" 
+ E selecionar os contatos desejados na lista apresentada
+ E clicar no icone "enviar" 
+ Entao a foto é enviada para os contatos selecionados.
+ 
+ 
+Cenário 2: Enviar foto para um contato.
+  
+ E inicia uma conversa com um contato
+ E clicar no icone "foto"
+ E capturar uma foto 
+ E clicar no icone "enviar" 
+ Entao a foto é enviada para o contato.
+ 
+ 
+ 
+
