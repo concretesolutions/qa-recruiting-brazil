@@ -44,6 +44,7 @@ public class Checkout {
     }
 
     private int setTotalDiscountPrice(int total, Rule rule) {
+
         return total += rule.getPrice();
     }
 
