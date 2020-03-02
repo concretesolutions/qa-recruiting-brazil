@@ -21,23 +21,46 @@ public class Checkout {
     }
 
     public int getTotal() {
-//        Predicate<Rule> hasGoods = rule -> itemsQuantity.containsKey(rule.getGoods().getSku());
-//        rules.stream()
-//                .filter(rule -> hasGoods.and(quantityIsSame) ? total = total + rule.getPrice() : true)
-//                .map(rule -> hasGoods ? total = total + (rule.getGoods().getUnitPrice() * itemsQuantity.get(rule.getGoods().getSku()).intValue()) : true);
         int total = 0;
         Map<String, Long> itemsQuantity = items.stream()
                 .collect(Collectors.groupingBy(item -> item, Collectors.counting()));
+
         if (itemsQuantity.size() > 0) {
             for (Rule rule : rules) {
-                if (itemsQuantity.containsKey(rule.getGoods().getSku()) && rule.getGoodsQtd() == itemsQuantity.get(rule.getGoods().getSku()).intValue()) {
-                    total = total + rule.getPrice();
-                } else if (itemsQuantity.containsKey(rule.getGoods().getSku())) {
-                    total = total + (rule.getGoods().getUnitPrice() * itemsQuantity.get(rule.getGoods().getSku()).intValue()) ;
+                if (hasGoods(itemsQuantity, rule)) {
+                    total = setTotalPrice(itemsQuantity, rule, total);
                 }
             }
         }
         return total;
+    }
+
+    private int setTotalPrice(Map<String, Long> itemsQuantity, Rule rule, int total) {
+        return hasSameQtd(itemsQuantity, rule) ? setTotalDiscountPrice(total, rule) : setTotalRegularPrice(itemsQuantity, rule, total);
+    }
+
+    private int setTotalRegularPrice(Map<String, Long> itemsQuantity, Rule rule, int total) {
+        return total += getRuleUnitPrice(rule) * getItemQtd(itemsQuantity, rule);
+    }
+
+    private int setTotalDiscountPrice(int total, Rule rule) {
+        return total += rule.getPrice();
+    }
+
+    private int getItemQtd(Map<String, Long> itemsQuantity, Rule rule) {
+        return itemsQuantity.get(rule.getGoods().getSku()).intValue();
+    }
+
+    private int getRuleUnitPrice(Rule rule) {
+        return rule.getGoods().getUnitPrice();
+    }
+
+    private boolean hasSameQtd(Map<String, Long> itemsQuantity, Rule rule) {
+        return rule.getGoodsQtd() == getItemQtd(itemsQuantity, rule);
+    }
+
+    private boolean hasGoods(Map<String, Long> itemsQuantity, Rule rule) {
+        return itemsQuantity.containsKey(rule.getGoods().getSku());
     }
 
     public void scan(String goods) {

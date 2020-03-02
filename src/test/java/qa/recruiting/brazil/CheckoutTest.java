@@ -57,7 +57,7 @@ public class CheckoutTest {
         List<Rule> rules = getRules();
         Checkout checkout = new Checkout(rules);
         items.chars()
-                .mapToObj(character -> Character.toString(character))
+                .mapToObj(Character::toString)
                 .forEach(checkout::scan);
 
         return checkout.getTotal();
@@ -67,8 +67,7 @@ public class CheckoutTest {
         ObjectMapper mapper = new ObjectMapper();
         String rulesPath = "/rules.json";
         InputStream inputStream = CheckoutTest.class.getResourceAsStream(rulesPath);
-        List<Rule> rules = mapper.readValue(inputStream, new TypeReference<List<Rule>>(){});
-        return rules;
-    }
 
+        return mapper.readValue(inputStream, new TypeReference<List<Rule>>(){});
+    }
 }
