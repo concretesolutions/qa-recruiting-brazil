@@ -33,8 +33,3 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.9.10.1'
 }
-
-application {
-    // Define the main class for the application.
-    mainClassName = 'qa.recruiting.brazil.App'
-}
