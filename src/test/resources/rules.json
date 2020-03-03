@@ -1,0 +1,34 @@
+[
+  {
+    "goods": {
+      "sku": "A",
+      "unitPrice": 50
+    },
+    "goodsQtd": 3,
+    "price": 130
+  },
+  {
+    "goods": {
+      "sku": "B",
+      "unitPrice": 30
+    },
+    "goodsQtd": 2,
+    "price": 45
+  },
+  {
+    "goods": {
+      "sku": "C",
+      "unitPrice": 20
+    },
+    "goodsQtd": 1,
+    "price": 20
+  },
+  {
+    "goods": {
+      "sku": "D",
+      "unitPrice": 15
+    },
+    "goodsQtd": 1,
+    "price": 15
+  }
+]
