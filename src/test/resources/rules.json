@@ -20,15 +20,15 @@
       "sku": "C",
       "unitPrice": 20
     },
-    "goodsQtd": 0,
-    "price": 0
+    "goodsQtd": 1,
+    "price": 20
   },
   {
     "goods": {
       "sku": "D",
       "unitPrice": 15
     },
-    "goodsQtd": 0,
-    "price": 0
+    "goodsQtd": 1,
+    "price": 15
   }
 ]

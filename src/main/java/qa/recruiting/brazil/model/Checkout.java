@@ -6,6 +6,7 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 @Getter
@@ -15,56 +16,64 @@ public class Checkout {
     private List<Rule> rules;
     List<String> items = new ArrayList<>();
 
-
     public Checkout(List<Rule> rules) {
         this.rules = rules;
     }
 
+    public void scan(String goods) {
+        items.add(goods);
+    }
+
     public int getTotal() {
-        int total = 0;
+        AtomicInteger total = new AtomicInteger();
         Map<String, Long> itemsQuantity = items.stream()
                 .collect(Collectors.groupingBy(item -> item, Collectors.counting()));
 
         if (itemsQuantity.size() > 0) {
-            for (Rule rule : rules) {
-                if (hasGoods(itemsQuantity, rule)) {
-                    total = setTotalPrice(itemsQuantity, rule, total);
-                }
-            }
+            itemsQuantity.forEach((item, quantity) ->
+            {
+                Rule currentRule = rules.stream()
+                        .filter(rule -> isTheSameRule(item, rule))
+                        .findFirst()
+                        .get();
+                total.set(setTotalPrice(quantity.intValue(), currentRule, total.get()));
+            });
+        }
+        return total.get();
+    }
+
+    private boolean isTheSameRule(String item, Rule rule) {
+        return rule.getGoods().getSku().equals(item);
+    }
+
+    private int setTotalPrice(int quantity, Rule rule, int total) {
+        if (quantity == 1) {
+            total = setTotalRegularPrice(quantity, rule, total);
+        } else {
+            total = setTotalDiscountPrice(quantity, rule, total);
         }
         return total;
     }
 
-    private int setTotalPrice(Map<String, Long> itemsQuantity, Rule rule, int total) {
-        return hasSameQtd(itemsQuantity, rule) ? setTotalDiscountPrice(total, rule) : setTotalRegularPrice(itemsQuantity, rule, total);
+    private int setTotalRegularPrice(int quantity, Rule rule, int total) {
+        return total + getRuleUnitPrice(rule) * quantity;
     }
 
-    private int setTotalRegularPrice(Map<String, Long> itemsQuantity, Rule rule, int total) {
-        return total += getRuleUnitPrice(rule) * getItemQtd(itemsQuantity, rule);
-    }
+    private int setTotalDiscountPrice(int quantity, Rule rule, int total) {
+        int multiplicandFactor = 0;
+        int mode = rule.getGoodsQtd() % quantity;
+        int rest = quantity % rule.getGoodsQtd();
 
-    private int setTotalDiscountPrice(int total, Rule rule) {
+        if(mode == 0) {
+            multiplicandFactor = rule.getGoodsQtd() / quantity;
+        } else if (mode == rule.getGoodsQtd()) {
+            multiplicandFactor = quantity / rule.getGoodsQtd();
+        }
 
-        return total += rule.getPrice();
-    }
-
-    private int getItemQtd(Map<String, Long> itemsQuantity, Rule rule) {
-        return itemsQuantity.get(rule.getGoods().getSku()).intValue();
+        return total + (rule.getPrice() * multiplicandFactor) + (getRuleUnitPrice(rule) * rest);
     }
 
     private int getRuleUnitPrice(Rule rule) {
         return rule.getGoods().getUnitPrice();
-    }
-
-    private boolean hasSameQtd(Map<String, Long> itemsQuantity, Rule rule) {
-        return rule.getGoodsQtd() == getItemQtd(itemsQuantity, rule);
-    }
-
-    private boolean hasGoods(Map<String, Long> itemsQuantity, Rule rule) {
-        return itemsQuantity.containsKey(rule.getGoods().getSku());
-    }
-
-    public void scan(String goods) {
-        items.add(goods);
     }
 }
