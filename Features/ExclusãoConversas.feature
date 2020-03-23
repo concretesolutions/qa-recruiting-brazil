@@ -11,19 +11,13 @@ Dado que eu acesse a página principal do whatsapp
 Cenário: Excluindo individualmente uma conversa
 Neste cenário o usuário excluirá uma conversa por vez!
 
-Quando deslizar para a esquerda a conversa de um contato
-E clicar na opção 'Mais'
-E clicar na opção 'Apagar conversa'
-E clicar na opção 'Apagar conversa' que aparecerá no pop-up de confirmação
+Quando apagar a conversa individualmente
 Então excluirá a conversa e o contato não aparecerá mais na página principal
 
 @Excluir_Maisdeum
 Cenário: Excluindo mais de uma conversa ao mesmo tempo
 Neste cenário o usuário excluirá mais de uma conversa por vez!
 
-Quando clicar na opção 'editar'
-E marcar as conversas que deseja excluir
-E clicar na opção 'Apagar'
-E clicar na opção 'Apagar x conversas' que aparecerá no pop-up de confirmação
-Então excluirá as conversas e os contatos não aparecerão mais na página principal
+Quando marcar mais de uma conversa
+Então as conversas dos contatos não aparecerão mais na página principal
  
