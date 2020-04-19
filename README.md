@@ -2,11 +2,13 @@
 
 Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.
 
-Para isso você deverá conceber cenários para duas funcionalidades do Whatsapp e resolver o exercício 09 do site [CodeKata](http://www.codekata.com), que também pode ser encontrado [aqui](Kata09.md).
+Para isso você deverá fazer :
+-   Conceber cenários para duas funcionalidades do aplicativo que voce mais consome no seu cotidiano (sugestão Whatsapp)
+-   Resolver o exercício 09 do site [CodeKata](http://www.codekata.com), que também pode ser encontrado [aqui](Kata09.md).
 
 ### Deve conter ###
 
-* Especificação de duas funcionalidades do Whatsapp (não importa se o app é Android, iOS, Windows Phone ou versão Web) em Gherkin ou Gauge
+* Especificação de duas funcionalidades (não importa se o app é Android, iOS, Windows Phone ou versão Web) em Gherkin ou Gauge
 * Cada especificação deve conter ao menos um cenário de teste
 * Resposta do exercício 09 do site [CodeKata](http://www.codekata.com), ou [aqui](Kata09.md), na linguagem de programação que lhe for mais conveniente
 
