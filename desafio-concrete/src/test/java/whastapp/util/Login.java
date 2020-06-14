@@ -18,14 +18,14 @@ public class Login {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("https://web.whatsapp.com/");
-            WebDriverWait wait = new WebDriverWait(driver, 30);
+            WebDriverWait wait = new WebDriverWait(driver, 60);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(Elementos.cssMsgTelaInicial)));
         }
         return driver;
     }
 
     public static WebDriverWait getWait() {
-        wait = new WebDriverWait(getDriver(), 60);
+        wait = new WebDriverWait(getDriver(), 30);
         return wait;
     }
 
