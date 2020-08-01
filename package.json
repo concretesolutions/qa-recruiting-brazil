@@ -1,0 +1,23 @@
+{
+  "name": "qa-recruiting-brazil",
+  "version": "1.0.0",
+  "description": "Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorainegarutti/qa-recruiting-brazil.git"
+  },
+  "keywords": [],
+  "author": "Loraine Barcha Garutti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lorainegarutti/qa-recruiting-brazil/issues"
+  },
+  "homepage": "https://github.com/lorainegarutti/qa-recruiting-brazil#readme",
+  "devDependencies": {
+    "cucumber": "^6.0.5"
+  }
+}
