@@ -2,9 +2,9 @@
   "name": "qa-recruiting-brazil",
   "version": "1.0.0",
   "description": "Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.",
-  "main": "index.js",
+  "main": "resposta-kata/index.js",
   "scripts": {
-    "test": ""
+    "test": "jest"
   },
   "repository": {
     "type": "git",

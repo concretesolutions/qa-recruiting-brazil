@@ -1,3 +1,11 @@
+# Resposta do Desafio
+
+* Especificações de cenários de teste estão na pasta 'features-whatsapp'. Escolhi o módulo mobile-android para testar. Desenvolvi os cenários em Gherkin utilizando Cucumber, pronto para automatizar e transformar num código BDD.
+A primeira funcionalidade é a de apagar mensagem enviada. A segunda é a de buscar conversa no histórico.
+
+* Resposta do exercício do CodeKata está na pasta 'resposta-kata'. Tentei transformar a lógica para a linguagem Javascript no arquivo 'index.js'. Para os testes unitários utilizei Jest no arquivo 'index.test.js'.
+
+
 # Objetivo do Desafio
 
 Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.
