@@ -17,5 +17,5 @@ Funcionalidade: Whatsapp Web - Validar alterações no perfil
 
   @alterar_nome_perfil
   Esquema do Cenário: Validar alteração do nome no perfil
-    Quando altero meu nome apóis clicar em "Editar"
+    Quando altero meu nome após clicar em "Editar"
     Então valido que o meu nome de perfil foi alterado
