@@ -1,3 +1,11 @@
+
+### **PARA RODAR OS TESTES:** ###
+Acessar o repositório do projeto via terminal e digitar o seguinte comando:
+
+- $ python3 -m unittest checkout.py
+
+Pré condição: Necessário ter o python3 instalado na máquina.
+
 # Objetivo do Desafio
 
 Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.
