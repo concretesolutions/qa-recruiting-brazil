@@ -22,3 +22,8 @@ O processo de Pull Request funciona da seguinte maneira:
 
 ### **ATENÇÃO** ###
 Não se deve tentar fazer o PUSH diretamente para ESTE repositório!!!
+
+### **PARA RODAR OS TESTES:** ###
+python3 -m unittest checkout.py
+
+Pré condição: Necessário ter o python3 instalado na máquina.
