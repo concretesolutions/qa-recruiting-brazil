@@ -22,3 +22,17 @@ O processo de Pull Request funciona da seguinte maneira:
 
 ### **ATENÇÃO** ###
 Não se deve tentar fazer o PUSH diretamente para ESTE repositório!!!
+
+### **Executar Codigo** ###
+
+### Installation:
+- [Python](https://www.python.org/downloads/)
+
+### Running:
+No terminal vá até a pasta do projeto e execute o seguinte comando:
+>python runTest.py
+
+## Develop by:
+Renato José 
+<renatojoa@gmail.com>
+[Site](http://www.renato.pw/)
