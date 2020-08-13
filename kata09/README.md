@@ -1,4 +1,4 @@
-# Especificação Funcionalidades Whatsapp
+# Solução Kata09
 
 Proposta de solução para o desafio da concrete solutions,
 utilizado no recrutamento de QA's.
