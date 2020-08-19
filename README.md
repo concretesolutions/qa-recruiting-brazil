@@ -1,3 +1,4 @@
+
 # Objetivo do Desafio
 
 Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.
