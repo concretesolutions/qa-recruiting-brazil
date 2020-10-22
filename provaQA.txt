@@ -1,0 +1,24 @@
+#enviar uma mensagem
+#anexar arquivo
+Funcionalidade: Enviar mensagem via whatsapp
+	A fim de enviar mensagem
+	O Wilson deve ser capaz de
+    	enviar mensagem a todo o momento
+
+Cenário: Wilson envia uma mensagem via whatsapp
+    Dado que Wilson tenha acesso a internet no seu celular
+    Quando eu digitar a mensagem "Bom dia" 
+    Então ao lado da mensagem "Bom dia" ficará com dois checkbox
+    Então eu verei que o destinatário recebeu a mensagem "Bom dia"
+
+Funcionalidade: Anexar arquivo via whatsapp
+	A fim de anexar arquivo
+	O Wilson deve ser capaz de
+    	anexar arquivos a todo o momento
+
+Cenário: Wilson anexa um arquivo via whatsapp
+    Dado que Wilson tenha um arquivo que esteja em qualquer diretório do celular
+    Quando eu clicar no ícone de anexo
+    Quando eu clicar no diretório onde está o arquivo
+    Quando eu selecionar um arquivo no diretório desejado
+    Então o arquivo será anexado na mensagem
