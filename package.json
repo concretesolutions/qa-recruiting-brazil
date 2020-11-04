@@ -1,0 +1,57 @@
+{
+  "name": "qa-recruiting-brazil",
+  "description": "Verificar suas habilidades em conceber cenários de testes e em programação, necessárias para automatização dos testes.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunopulis/qa-recruiting-brazil.git"
+  },
+  "keywords": [
+    "jest",
+    "javascript",
+    "qa"
+  ],
+  "author": "Bruno Pulis <bruno.pulis@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunopulis/qa-recruiting-brazil/issues"
+  },
+  "homepage": "https://github.com/brunopulis/qa-recruiting-brazil#readme",
+  "validate-commit-msg": {
+    "types": [
+      "feat",
+      "fix",
+      "docs",
+      "style",
+      "refactor",
+      "perf",
+      "test",
+      "chore",
+      "revert"
+    ],
+    "warnOnFail": false,
+    "maxSubjectLength": 100,
+    "subjectPattern": "^[A-Z]+-[0-9]+ - .*",
+    "subjectPatternErrorMsg": "Subject must be in format 'CMS-123 - Commit message'",
+    "helpMessage": ""
+  },
+  "commitmsg": "validate-commit-msg",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
