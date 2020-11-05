@@ -70,5 +70,17 @@ describe('Checkout', () => {
       // Assert
       expect(checkout.total()).toBe(115);
     });
+
+    it("should be return 115 if the item was 'AA'", () => {
+      // Arrange
+      const checkout = new Checkout(rules);
+
+      // Act
+      checkout.scan("A");
+      checkout.scan("A");
+
+      // Assert
+      expect(checkout.total()).toBe(100);
+    });
   });
 });
