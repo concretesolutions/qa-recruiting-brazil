@@ -4,6 +4,11 @@ const rules = [
   {
     "item": "A",
     "price": 50
+  },
+
+  {
+    "item": "B",
+    "price": 30
   }
 ];
 
@@ -27,5 +32,18 @@ describe('Checkout', () => {
       // Assert
       expect(checkout.total()).toBe(50);
     })
+
+  it("should be return 80 if the item was 'AB'", () => {
+      // Arrange
+      const checkout = new Checkout(rules);
+
+      // Act
+      checkout.scan("A");
+      checkout.scan("B");
+
+      // Assert
+      expect(checkout.total()).toBe(80);
+
+    });
   });
 });
