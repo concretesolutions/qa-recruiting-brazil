@@ -1,5 +1,6 @@
 import Checkout from './checkout'
 
+// Mock Object
 const rules = [
   {
     "item": "A",
@@ -9,6 +10,16 @@ const rules = [
   {
     "item": "B",
     "price": 30
+  },
+
+  {
+    "item": "C",
+    "price": 20
+  },
+
+  {
+    "item": "D",
+    "price": 15
   }
 ];
 
@@ -44,6 +55,20 @@ describe('Checkout', () => {
       // Assert
       expect(checkout.total()).toBe(80);
 
+    });
+
+  it("should be return 115 if the item was 'CDBA'", () => {
+      // Arrange
+      const checkout = new Checkout(rules);
+
+      // Act
+      checkout.scan("C");
+      checkout.scan("D");
+      checkout.scan("B");
+      checkout.scan("A");
+
+      // Assert
+      expect(checkout.total()).toBe(115);
     });
   });
 });
