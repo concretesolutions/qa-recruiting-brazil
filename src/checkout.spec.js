@@ -71,8 +71,8 @@ describe('Checkout', () => {
       expect(checkout.total()).toBe(115);
     });
 
-    it("should be return 115 if the item was 'AA'", () => {
-      // Arrange
+    it("should be return 100 if the item was 'AA'", () => {
+      // Arrangeg
       const checkout = new Checkout(rules);
 
       // Act
