@@ -4,7 +4,11 @@ import Checkout from './checkout'
 const rules = [
   {
     "item": "A",
-    "price": 50
+    "price": 50,
+    "special": {
+      "quantity": 3,
+      "specialPrice": 130
+    }
   },
 
   {
@@ -54,7 +58,6 @@ describe('Checkout', () => {
 
       // Assert
       expect(checkout.total()).toBe(80);
-
     });
 
   it("should be return 115 if the item was 'CDBA'", () => {
@@ -71,7 +74,7 @@ describe('Checkout', () => {
       expect(checkout.total()).toBe(115);
     });
 
-    it("should be return 100 if the item was 'AA'", () => {
+  it("should be return 100 if the item was 'AA'", () => {
       // Arrangeg
       const checkout = new Checkout(rules);
 
