@@ -17,3 +17,13 @@ Execute o comando `npm run test:watch` para executar os testes com o modo `watch
 ```sh
 npm run test:watch
 ```
+
+## Tecnologias usadas
+
+* Javascript ES6;
+* Jest;
+* Validate-commit;
+* Husky;
+* ESLint;
+* Editor Config;
+* Conventional Changelog
