@@ -1,0 +1,61 @@
+REQUISITOS FUNCIONAIS 
+[RFD1] Criar novo grupo 
+
+Para a criação de um novo grupo o usuário deve selecionar o ícone de mensagem localizado no menu superior na tela principal. Após selecionar a opção novo grupo, apresentando uma lista com os contatos do usuário. Selecionando os contatos desejados, deve o usuário colocar nome, imagem e descrição, estando esses campos preenchidos a criação do novo grupo será realizado.
+
+Ator:  Usuário
+Prioridade: □Essencial□Importante 🗹Desejável  
+Entradas e pré-condições: Conexão estável com a internet e conta ativa 
+Saídas e pós-condições: Usuário cria um novo grupo de conversa 
+
+2.2	[RFD2] Exibir dados do contato 
+
+O sistema deve permitir o usuário em uma conversa, selecionar no menu, abrindo um sub-menu com a opção Dados do contato.
+
+Ator:  Usuário
+Prioridade: □Essencial□Importante 🗹Desejável  
+Entradas e pré-condições: Conexão estável com a internet, conta ativa e conversa iniciada. 
+Saídas e pós-condições: Exibe ao usuários os dados do contato. 
+
+
+
+
+
+
+
+
+
+
+BDD (Behavior Driven Development – Gherkin ) 
+
+Funcionalidade: Novo grupo 
+Como usuário do sistemas desejo 
+cria um novo grupo de conversa 
+
+Cenario: selecionar contatos no grupo deverá criar um novo grupo
+Dado que sou um usuário 
+Quando selecionar um ou mais contatos 
+E seleciona a opção para seguir 
+E apresenta a tela para preenchimento do nome e descrição do grupo 
+Então deve o grupo ser criado com os contatos selecionados 
+
+Cenario: selecionar contatos no grupo apresentar erro caso não selecione nenhum contato 
+Dado que sou um usuario
+Quando não selecionado nenhum contato 
+Então deve o sistema não permitir que siga para o preenchimento dos dados do grupo 
+
+Funcionalidade: Dados do contato 
+Como usuário do sistema desejo 
+Verificar os dados do contato 
+
+Cenario: Verificar número de telefone do contato 
+Dado que sou um usuário 
+Quando seleciono uma conversa 
+E seleciono o menu
+E clico no sub-menu dados do contato
+Então deve apresentar ao usuário o número de telefone do contato na aba Recado e Número de telefone 
+
+Cenario: verificar dados de um contato de grupo 
+Dado que sou um usuário 
+Quando clico na seta em um contato de grupo 
+Então não deve apresentar a opção dados do contato 
