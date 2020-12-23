@@ -1,0 +1,72 @@
+#language: pt
+
+Funcionalidade: Limitar exibição da foto de perfil
+	A fim de garantir a privacidade
+	os usuários devem ser capazes de 
+	escolher as limitações de exibição de suas fotos de perfil
+
+Contexto:
+	Dado que eu tenho um aparelho conectado à internet
+	E que eu tenho acesso ao aplicativo do WhatsApp
+	E que eu tenho uma conta ativa no WhatsApp
+	E que eu tenho contatos salvos no WhatsApp
+
+Cenário: Contato com privacidade aberta	
+	E que a configuração de privacidade da foto do perfil do contato selecionado está aberta para Todos
+	Quando eu abro a miniatura do contato
+	Então posso ver sua foto de perfil expandida na tela
+
+Cenário: Contato com privacidade limitada	
+	E que a configuração de privacidade da foto do perfil do contato selecionado está limitada apenas para contatos salvos
+	E que eu sou um número salvo na lista deste contato
+	Quando eu abro a miniatura do contato
+	Então posso ver sua foto de perfil expandida na tela
+
+Cenário: Contato com privacidade fechada	
+	E que a configuração de privacidade da foto do perfil do contato selecionado está fechada apenas para ele mesmo
+	Quando eu abro a miniatura do contato
+	Então não vejo nenhuma foto da pessoa
+	Mas vejo um ícone de avatar na tela expandida
+
+Cenário: Usuário desconhecido com privacidade aberta	
+	E um usuário desconhecido me enviou uma mensagem
+	E que a configuração de privacidade da foto do perfil do desconhecido está aberta para Todos
+	Quando eu abro a miniatura do usuário desconhecido
+	Então vejo sua foto expandida na tela
+
+Cenário: Usuário desconhecido com privacidade limitada	
+	E um usuário desconhecido me enviou uma mensagem
+	E que a configuração de privacidade da foto do perfil do desconhecido está limitada apenas para contatos salvos
+	Quando eu abro a miniatura do contato
+	Então não vejo nenhuma foto da pessoa
+	Mas vejo um ícone de avatar na tela expandida
+
+Cenário: Usuário desconhecido com privacidade fechada	
+	E um usuário desconhecido me enviou uma mensagem
+	E que a configuração de privacidade da foto do perfil do desconhecido está fechada apenas para ele mesmo
+	Quando eu abro a miniatura do contato
+	Então não vejo nenhuma foto da pessoa
+	Mas vejo um ícone de avatar na tela expandida
+
+Cenário: Contato bloqueado com privacidade aberta
+	E que esse contato me bloqueou
+	E que a configuração de privacidade da foto do perfil do contato que me bloqueou está aberta para Todos
+	Quando eu abro a miniatura do contato
+	Então não vejo nenhuma foto da pessoa
+	Mas vejo um ícone de avatar na tela expandida
+
+Cenário: Contato bloqueado com privacidade limitada
+	E que esse contato me bloqueou
+	E que a configuração de privacidade da foto do perfil do contato que me bloqueou está limitada apenas para contatos salvos
+	Quando eu abro a miniatura do contato
+	Então não vejo nenhuma foto da pessoa
+	Mas vejo um ícone de avatar na tela expandida
+
+Cenário: Contato bloqueado com privacidade fechada
+	E que esse contato me bloqueou
+	E que a configuração de privacidade da foto do perfil do contato que me bloqueou está fechada apenas para ele mesmo
+	Quando eu abro a miniatura do contato
+	Então não vejo nenhuma foto da pessoa
+	Mas vejo um ícone de avatar na tela expandida
+
+
