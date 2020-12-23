@@ -1,9 +1,9 @@
 #language: pt
 
 Funcionalidade: Confirmar leitura de mensagem
-  A fim de me comunicar com mais transparência
-  os usuários devem ser capazes de
-  confirmar se sua mensagem foi recebida e lida
+	A fim de me comunicar com mais transparência
+	os usuários devem ser capazes de
+	confirmar se sua mensagem foi recebida e lida
 
 Contexto:
 	Dado que eu tenho um aparelho conectado à internet
