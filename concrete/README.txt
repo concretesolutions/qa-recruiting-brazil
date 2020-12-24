@@ -8,8 +8,10 @@
 *  Version: 2020-12 (4.18.0)                                                            *
 *  Build id: 20201210-1552                                                              *
 *  Programming language: Java                                                           *
+*  JUnit Jupiter                                                                        *
 *  JDK: 1.8.0_271                                                                       *
 *  JRE: 1.8.0_271                                                                       *
+*                                                                                       *
 *                                                                                       *
 *  To run this project, please install Eclipse IDE for Java Developers using the        *
 *  configuration described above, download and import this project into your            *
