@@ -171,7 +171,6 @@ public class BackToCheckoutTest {
 				() ->  assertEquals(210, partialABCBDAB),
 				() ->  assertEquals(240, partialABCBDABA),
 				() ->  assertEquals(255, partialABCBDABAB)
-
 				);
 	}
 }

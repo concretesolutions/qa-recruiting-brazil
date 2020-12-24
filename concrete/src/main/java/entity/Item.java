@@ -26,7 +26,8 @@ public class Item {
 		this.unitPrice = price;
 	}
 	
-	
-
+	public void printItem() {
+		System.out.println(getId()+" | "+ getPrice());
+	}
 }
 

@@ -188,7 +188,7 @@ public class Checkout {
 		if(!itemList.isEmpty()) {
 			System.out.println(" ");
 			for (Item i : this.itemList){
-				System.out.println(i.getId()+" | "+ i.getPrice());
+				i.printItem();
 			}
 		}else {
 			System.out.println("There's no item on this list.");
@@ -199,45 +199,6 @@ public class Checkout {
 		System.out.println("Total: "+getTotalForPrint());
 	}
 
-
-	public int getInteratorItemA() {
-		return interatorItemA;
-	}
-
-
-	public void setInteratorItemA(int interatorItemA) {
-		this.interatorItemA = interatorItemA;
-	}
-
-
-	public int getInteratorItemB() {
-		return interatorItemB;
-	}
-
-
-	public void setInteratorItemB(int interatorItemB) {
-		this.interatorItemB = interatorItemB;
-	}
-
-
-	public int getInteratorItemC() {
-		return interatorItemC;
-	}
-
-
-	public void setInteratorItemC(int interatorItemC) {
-		this.interatorItemC = interatorItemC;
-	}
-
-
-	public int getInteratorItemD() {
-		return interatorItemD;
-	}
-
-
-	public void setInteratorItemD(int interatorItemD) {
-		this.interatorItemD = interatorItemD;
-	}
 
 
 }
