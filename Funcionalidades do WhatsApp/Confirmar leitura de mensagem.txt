@@ -1,0 +1,44 @@
+#language: pt
+
+Funcionalidade: Confirmar leitura de mensagem
+	A fim de me comunicar com mais transparência
+	os usuários devem ser capazes de
+	confirmar se sua mensagem foi recebida e lida
+
+Contexto:
+	Dado que eu tenho um aparelho conectado à internet
+	E que eu tenho acesso ao aplicativo do WhatsApp
+	E que eu tenho uma conta ativa no WhatsApp
+	E que eu tenho contatos salvos no WhatsApp
+	E que minhas configurações de confirmação de leitura estão ativadas
+	E que enviei uma mensagem para um contato ativo no WhatsApp
+
+Cenário: Mensagem enviada e lida 
+	E este contato também tem a confirmação de leitura ativada
+	E o destinatário tem conexão à internet
+	E o destinatário recebe a mensagem enviada
+	Quando o destinatário ler a mensagem recebida
+	Então eu vejo que os dois checks ao lado da mensagem ficaram azuis
+
+Cenário: Mensagem enviada e não lida
+	E este contato também tem a confirmação de leitura ativada
+	E o destinatário tem conexão à internet
+	E o destinatário recebe a mensagem enviada
+	Quando o destinatário não abre a mensagem
+	Então eu vejo que tem dois checks ao lado da mensagem
+	E os checks não mudaram de cor
+
+Cenário: Mensagem enviada e não recebida	
+	E este contato também tem a confirmação de leitura ativada
+	E o destinatário não está conectado à internet
+	Quando o destinatário não recebe a mensagem enviada
+	Então eu vejo que tem apenas um check ao lado da mensagem
+	E o check não mudou de cor
+
+Cenário: Mensagem enviada, lida mas sem confirmação do destinatário	
+	E este contato tem a confirmação de leitura desativada
+	E o destinatário tem conexão à internet
+	E o destinatário recebe a mensagem enviada
+	Quando o destinatário ler a mensagem recebida
+	Então eu vejo que os checks ao lado da mensagem não mudaram de cor
+
