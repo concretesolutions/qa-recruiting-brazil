@@ -1,0 +1,7 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>Adicionando o projeto.</message>\n</messages>
+eclipse.preferences.version=1
+repositories_view_filters=<?xml version\="1.0" encoding\="UTF-8"?>\n<FilterCache/>
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300
+resourcehistory_selected_ref_filters_.git=HEAD\:refs/heads/**\:refs/remotes/**\:refs/tags/**
+show_initial_config_dialog=false
