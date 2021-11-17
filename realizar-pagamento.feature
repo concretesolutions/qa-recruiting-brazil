@@ -12,3 +12,5 @@ Cenário: Realizar pagamento para um contato
   E clico na opção "pagamento"
   Então posso realizar um pagamento para o contato
   
+
+

@@ -15,3 +15,4 @@ Cenário: Arquivar várias conversas
   E seleciono várias conversa
   Quando aparece a opção "arquivar conversa"
   Então posso arquivar várias conversas
+
