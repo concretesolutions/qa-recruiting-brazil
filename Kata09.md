@@ -1,43 +1,33 @@
-# Kata09: Back to the Checkout
-
+Kata09: Voltar para o Checkout
 http://codekata.com/kata/kata09-back-to-the-checkout/
 
+De volta ao supermercado. Nesta semana, implementaremos o código para um sistema de checkout que lida com esquemas de preços como “maçãs custam 50 centavos, três maçãs custam $ 1,30”.
 
-Back to the supermarket. This week, we’ll implement the code for a checkout system that handles pricing schemes such as “apples cost 50 cents, three apples cost $1.30.”
+Já em KataOne, pensamos em como modelar as várias opções de preços de supermercado. Analisamos coisas como "três por um dólar", "US $ 1,99 por libra" e "compre dois e ganhe um de graça".
 
-Way back in KataOne we thought about how to model the various options for supermarket pricing. We looked at things such as “three for a dollar,” “$1.99 per pound,” and “buy two, get one free.”
+Esta semana, vamos implementar o código para uma caixa de supermercado que calcula o preço total de vários itens. Em um supermercado normal, as coisas são identificadas usando unidades de manutenção de estoque ou SKUs. Em nossa loja, usaremos letras individuais do alfabeto (A, B, C e assim por diante). Nossos produtos são avaliados individualmente. Além disso, alguns itens têm vários preços: compre n deles e eles custarão y centavos. Por exemplo, o item 'A' pode custar 50 centavos individualmente, mas esta semana temos uma oferta especial: compre três 'A's e eles custarão $ 1,30. Na verdade, os preços desta semana são:
 
-This week, let’s implement the code for a supermarket checkout that calculates the total price of a number of items. In a normal supermarket, things are identified using Stock Keeping Units, or SKUs. In our store, we’ll use individual letters of the alphabet (A, B, C, and so on). Our goods are priced individually. In addition, some items are multipriced: buy n of them, and they’ll cost you y cents. For example, item ‘A’ might cost 50 cents individually, but this week we have a special offer: buy three ‘A’s and they’ll cost you $1.30. In fact this week’s prices are:
+Item	Preço unitário	Preço especial
+UMA	50	3 por 130
+B	30	2 por 45
+C	20
+D	15
+Nosso checkout aceita itens em qualquer ordem, de modo que, se escanearmos um B, um A e outro B, reconheceremos os dois B e os colocaremos no preço de 45 (para um preço total até agora de 95). Como os preços mudam com frequência, precisamos ser capazes de aprovar um conjunto de regras de preços cada vez que começarmos a lidar com uma transação de checkout.
 
+A interface do checkout deve ser semelhante a:
 
-| Item | Unit Price | Special Price |
-|------|------------|---------------|
-| A    | 50         | 3 for 130     |
-| B    | 30         | 2 for 45      |
-| C    | 20         |               |
-| D    | 15         |               |
-
-
-Our checkout accepts items in any order, so that if we scan a B, an A, and another B, we’ll recognize the two B’s and price them at 45 (for a total price so far of 95). Because the pricing changes frequently, we need to be able to pass in a set of pricing rules each time we start handling a checkout transaction.
-
-The interface to the checkout should look like:
-
-```
 	co = CheckOut.new(pricing_rules)
 	co.scan(item)
 	co.scan(item)
 	price = co.total
-```	
+Aqui está um conjunto de testes de unidade para uma implementação Ruby. O preço do método auxiliar permite que você especifique uma sequência de itens usando uma string, chamando o método de verificação do checkout em cada item por vez antes de finalmente retornar o preço total.
 
-Here’s a set of unit tests for a Ruby implementation. The helper method price lets you specify a sequence of items using a string, calling the checkout’s scan method on each item in turn before finally returning the total price.
-
-```
 class TestPrice < Test::Unit::TestCase
-	def price(goods)
-		co = CheckOut.new(RULES)
-		goods.split(//).each { |item| co.scan(item) }
-		co.total 
-	end
+def price(goods)
+co = CheckOut.new(RULES)
+goods.split(//).each { |item| co.scan(item) }
+co.total
+end
 
 	def test_totals
 		assert_equal(  0, price(""))
@@ -67,10 +57,7 @@ class TestPrice < Test::Unit::TestCase
 		co.scan("B"); assert_equal(175, co.total)
 	end 
 end
-```
+Existem muitas maneiras de implementar esse tipo de algoritmo; se você tiver tempo, experimente vários.
 
-There are lots of ways of implementing this kind of algorithm; if you have time, experiment with several.
-
-## Objectives of the Kata
-
-To some extent, this is just a fun little problem. But underneath the covers, it’s a stealth exercise in decoupling. The challenge description doesn’t mention the format of the pricing rules. How can these be specified in such a way that the checkout doesn’t know about particular items and their pricing strategies? How can we make the design flexible enough so that we can add new styles of pricing rule in the future?
+Objetivos do Kata
+Até certo ponto, este é apenas um pequeno problema divertido. Mas, por baixo das cobertas, é um exercício furtivo de desacoplamento. A descrição do desafio não menciona o formato das regras de preços. Como isso pode ser especificado de forma que o caixa não conheça os itens específicos e suas estratégias de preços? Como podemos tornar o design flexível o suficiente para que possamos adicionar novos estilos de regra de precificação no futuro?
